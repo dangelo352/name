@@ -4,8 +4,9 @@ package tutorial14;
 public class LevelData {
     
     public static int player_start_pos[][] ={
-      {0,400}, //level 1 start position (x,y)
-      {0,600}  //level 2 start etc.
+      {0,500}, //level 1 start position (x,y)
+      {0,500},  //level 2 start etc.
+      {0,500}
     };
     
     public static String background_img[] ={
