@@ -78,7 +78,7 @@ public class Main extends Application {
                 
                 for(int k=0; k<Tileset.Tiles.length; k++) {
                 
-                  if( line.charAt(j) == Tileset.Tiles[k].tile_char && line.charAt(j) != '0' ){
+                  if( line.charAt(j) == Tileset.Tiles[k].tile_char && line.charAt(j) != ' ' && line.charAt(j) != '0' && line.charAt(j) != '2' ){ //here we need an exeption for every not hard block this can be solved by 
                 
                   Node platform = createEntity(j*60, i*60, 60, 60, Tileset.Tiles[k].path ); //litrlaly make platform with strong from tileset ckass
                   platforms.add(platform);   
