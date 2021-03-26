@@ -69,19 +69,30 @@ public class Main extends Application {
         for (int i = 0; i < LevelData.level_dat[Current_Level].length; i++) {
             String line = LevelData.level_dat[Current_Level][i];
             for (int j = 0; j < line.length(); j++) {
-                switch (line.charAt(j)) {
-                    case '0':
-                        break;
-                    case '1':
-                        Node platform = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/gras.gif" );
-                        platforms.add(platform);
-                        break;
-                    case '2':
-                        Node coin = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/koin.png" );
-                        coins.add(coin);
-                        break;
-                    
+                if(line.charAt(j) == '0'){}
+                if(line.charAt(j) == '1')// this is my shit solution where i fix after sleep (a temp solution so pepole can use api to make gam)
+                {
+                Node platform = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/gras.gif" );
+                platforms.add(platform);        
                 }
+                
+                for(int k=0; k<Tileset.Tiles.length; k++) {
+                
+                  if( line.charAt(j) == Tileset.Tiles[k].tile_char && line.charAt(j) != '0' ){
+                
+                  Node platform = createEntity(j*60, i*60, 60, 60, Tileset.Tiles[k].path ); //litrlaly make platform with strong from tileset ckass
+                  platforms.add(platform);   
+                  }
+                }
+                
+                if(line.charAt(j) == '2') 
+                {
+                Node coin = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/koin.png" );
+                coins.add(coin);
+                }
+                    
+                    
+                
             }
         }
 
