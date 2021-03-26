@@ -61,7 +61,7 @@ public class Main extends Application {
       platforms.clear();
       coins.clear();
       
-        Rectangle bg = new Rectangle(1280, 720);  
+        //Rectangle bg = new Rectangle(1280, 720);  
         
         levelWidth = LevelData.level_dat[Current_Level][0].length() * 60;
         
@@ -95,7 +95,7 @@ public class Main extends Application {
             }
         });
 
-        appRoot.getChildren().addAll(bg, gameRoot, uiRoot);
+        appRoot.getChildren().addAll( gameRoot, uiRoot);// bg,
     }
 
     private void update() {
@@ -214,8 +214,23 @@ public class Main extends Application {
         initContent();  
         
         StackPane stackPane = new StackPane();
+        String backgroundTemp = LevelData.background_img[Current_Level];
+        try{
+        Image image = new Image(new FileInputStream(backgroundTemp));
         
-        Scene scene = new Scene(appRoot);
+        Rectangle shape = new Rectangle();
+        shape.setHeight(720);
+        shape.setWidth(1280);
+        shape.setFill(new ImagePattern(image));
+        
+        stackPane.getChildren().add(shape);
+        }catch(FileNotFoundException e){}
+        
+
+        stackPane.getChildren().add(appRoot);
+
+        
+        Scene scene = new Scene(stackPane);
         scene.setOnKeyPressed(event -> keys.put(event.getCode(), true));
         scene.setOnKeyReleased(event -> keys.put(event.getCode(), false));
         primaryStage.setTitle("Tutorial");
@@ -231,7 +246,6 @@ public class Main extends Application {
 
                 if (dialogEvent) {
                     dialogEvent = false;
-                    //keys.keySet().forEach(key -> keys.put(key, false));
                     Current_Level +=1;
                     initContent();
                     running = true;
