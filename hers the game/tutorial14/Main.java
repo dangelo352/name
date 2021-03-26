@@ -61,37 +61,41 @@ public class Main extends Application {
       platforms.clear();
       coins.clear();
       
-        //Rectangle bg = new Rectangle(1280, 720);  
-        
         levelWidth = LevelData.level_dat[Current_Level][0].length() * 60;
-        
          
         for (int i = 0; i < LevelData.level_dat[Current_Level].length; i++) {
             String line = LevelData.level_dat[Current_Level][i];
-            for (int j = 0; j < line.length(); j++) {
-                if(line.charAt(j) == '0'){}
-                if(line.charAt(j) == '1')// this is my shit solution where i fix after sleep (a temp solution so pepole can use api to make gam)
-                {
-                Node platform = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/gras.gif" );
-                platforms.add(platform);        
-                }
+            for (int j = 0; j < line.length(); j++) {  
                 
-                for(int k=0; k<Tileset.Tiles.length; k++) {
-                
-                  if( line.charAt(j) == Tileset.Tiles[k].tile_char && line.charAt(j) != ' ' && line.charAt(j) != '0' && line.charAt(j) != '2' ){ //here we need an exeption for every not hard block this can be solved by 
-                
-                  Node platform = createEntity(j*60, i*60, 60, 60, Tileset.Tiles[k].path ); //litrlaly make platform with strong from tileset ckass
+                for(int k=0; k<Tileset.ColTiles.length; k++) {
+                  if(line.charAt(j) == Tileset.ColTiles[k].tile_char ){ 
+                  Node platform = createEntity(j*60, i*60, 60, 60, Tileset.ColTiles[k].path );
                   platforms.add(platform);   
                   }
                 }
                 
-                if(line.charAt(j) == '2') 
-                {
-                Node coin = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/koin.png" );
-                coins.add(coin);
+                for(int k=0; k<Tileset.NoColTiles.length; k++) {
+                  if( line.charAt(j) == Tileset.NoColTiles[k].tile_char && line.charAt(j)!=' '&&line.charAt(j)!='0' ){ //here we need an exeption for every not hard block this can be solved by
+                  Node platform = createEntity(j*60, i*60, 60, 60, Tileset.NoColTiles[k].path ); //litrlaly make platform with strong from tileset ckass
+                  }
                 }
-                    
-                    
+                
+                for(int k=0; k<Tileset.SpecialTile.length; k++) {
+                  if( line.charAt(j) == Tileset.SpecialTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
+                
+                  Node coin = createEntity(j*60, i*60, 60, 60, Tileset.SpecialTile[k].path ); //litrlaly make platform with strong from tileset ckass
+                  coins.add(coin);   
+                  }
+                }
+                
+                
+                for(int k=0; k<Tileset.EnemyTile.length; k++) {
+                  if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
+                
+                  Node coin = createEntity(j*60, i*60, 60, 60, Tileset.EnemyTile[k].path ); //litrlaly make platform with strong from tileset ckass
+                  coins.add(coin);   
+                  }
+                }
                 
             }
         }
