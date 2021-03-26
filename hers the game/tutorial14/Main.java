@@ -58,8 +58,8 @@ public class Main extends Application {
         levelWidth = LevelData.LEVEL1[0].length() * 60;
         
          
-        for (int i = 0; i < LevelData.LEVEL1.length; i++) {
-            String line = LevelData.LEVEL1[i];
+        for (int i = 0; i < LevelData.LEVEL2.length; i++) {
+            String line = LevelData.LEVEL2[i];
             for (int j = 0; j < line.length(); j++) {
                 switch (line.charAt(j)) {
                     case '0':
@@ -72,6 +72,7 @@ public class Main extends Application {
                         Node coin = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/koin.png" );
                         coins.add(coin);
                         break;
+                    
                 }
             }
         }
@@ -235,7 +236,8 @@ public class Main extends Application {
                         running = true;
                     });
                     dialog.open();
-                }
+                    
+                                   }
             }
         };
         timer.start();
