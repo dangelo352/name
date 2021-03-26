@@ -52,14 +52,22 @@ public class Main extends Application {
 
     private boolean dialogEvent = false, running = true;
     
+    public int Current_Level = 0;
+    
     private void initContent() {
-        Rectangle bg = new Rectangle(1280, 720);
-
-        levelWidth = LevelData.LEVEL1[0].length() * 60;
+      gameRoot.getChildren().clear();
+      gameRoot.setLayoutX(0);
+      appRoot.getChildren().clear();
+      platforms.clear();
+      coins.clear();
+      
+        Rectangle bg = new Rectangle(1280, 720);  
+        
+        levelWidth = LevelData.level_dat[Current_Level][0].length() * 60;
         
          
-        for (int i = 0; i < LevelData.LEVEL2.length; i++) {
-            String line = LevelData.LEVEL2[i];
+        for (int i = 0; i < LevelData.level_dat[Current_Level].length; i++) {
+            String line = LevelData.level_dat[Current_Level][i];
             for (int j = 0; j < line.length(); j++) {
                 switch (line.charAt(j)) {
                     case '0':
@@ -77,7 +85,7 @@ public class Main extends Application {
             }
         }
 
-        player = createEntity(0, 600, 40, 40, "tutorial14/texture/bad.png");
+        player = createEntity(LevelData.player_start_pos[Current_Level][0], LevelData.player_start_pos[Current_Level][1], 40, 40, "tutorial14/texture/bad.png");
 
         player.translateXProperty().addListener((obs, old, newValue) -> {
             int offset = newValue.intValue();
@@ -96,6 +104,7 @@ public class Main extends Application {
         }
         if (isPressed(KeyCode.SPACE) && player.getTranslateY() >= 5) {
             jumpPlayer();
+
         }
 
         if (isPressed(KeyCode.A) && player.getTranslateX() >= 5) {
@@ -222,22 +231,11 @@ public class Main extends Application {
 
                 if (dialogEvent) {
                     dialogEvent = false;
-                    keys.keySet().forEach(key -> keys.put(key, false));
-
-                    GameDialog dialog = new GameDialog();
-                    dialog.setOnCloseRequest(event -> {
-                        if (dialog.isCorrect()) {
-                            System.out.println("Correct");
-                        }
-                        else {
-                            System.out.println("Wrong");
-                        }
-
-                        running = true;
-                    });
-                    dialog.open();
-                    
-                                   }
+                    //keys.keySet().forEach(key -> keys.put(key, false));
+                    Current_Level +=1;
+                    initContent();
+                    running = true;
+                    }
             }
         };
         timer.start();

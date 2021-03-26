@@ -4,7 +4,7 @@ import javafx.scene.image.*;
 import java.io.File;  
 
 
-public class TileCharDef {
+public class Tile {
     public String name;
     public char tile_char;
     public Image img;
