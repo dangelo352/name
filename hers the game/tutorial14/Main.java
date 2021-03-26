@@ -54,6 +54,15 @@ public class Main extends Application {
     
     public int Current_Level = 0;
     
+    //these control physics objects sise
+    public int stage_tall = 60;
+    public int stage_wide = 60;
+    
+    //this controlls player sise
+    public int player_tall = 60;
+    public int player_wide = 40;
+    
+    
     private void initContent() {
       gameRoot.getChildren().clear();
       gameRoot.setLayoutX(0);
@@ -61,7 +70,7 @@ public class Main extends Application {
       platforms.clear();
       coins.clear();
       
-        levelWidth = LevelData.level_dat[Current_Level][0].length() * 60;
+        levelWidth = LevelData.level_dat[Current_Level][0].length() * stage_wide;
          
         for (int i = 0; i < LevelData.level_dat[Current_Level].length; i++) {
             String line = LevelData.level_dat[Current_Level][i];
@@ -69,21 +78,21 @@ public class Main extends Application {
                 
                 for(int k=0; k<Tileset.ColTiles.length; k++) {
                   if(line.charAt(j) == Tileset.ColTiles[k].tile_char ){ 
-                  Node platform = createEntity(j*60, i*60, 60, 60, Tileset.ColTiles[k].path );
+                  Node platform = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.ColTiles[k].path );
                   platforms.add(platform);   
                   }
                 }
                 
                 for(int k=0; k<Tileset.NoColTiles.length; k++) {
                   if( line.charAt(j) == Tileset.NoColTiles[k].tile_char && line.charAt(j)!=' '&&line.charAt(j)!='0' ){ //here we need an exeption for every not hard block this can be solved by
-                  Node platform = createEntity(j*60, i*60, 60, 60, Tileset.NoColTiles[k].path ); //litrlaly make platform with strong from tileset ckass
+                  Node platform = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.NoColTiles[k].path ); //litrlaly make platform with strong from tileset ckass
                   }
                 }
                 
                 for(int k=0; k<Tileset.SpecialTile.length; k++) {
                   if( line.charAt(j) == Tileset.SpecialTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
                 
-                  Node coin = createEntity(j*60, i*60, 60, 60, Tileset.SpecialTile[k].path ); //litrlaly make platform with strong from tileset ckass
+                  Node coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.SpecialTile[k].path ); //litrlaly make platform with strong from tileset ckass
                   coins.add(coin);   
                   }
                 }
@@ -92,7 +101,7 @@ public class Main extends Application {
                 for(int k=0; k<Tileset.EnemyTile.length; k++) {
                   if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
                 
-                  Node coin = createEntity(j*60, i*60, 60, 60, Tileset.EnemyTile[k].path ); //litrlaly make platform with strong from tileset ckass
+                  Node coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); //litrlaly make platform with strong from tileset ckass
                   coins.add(coin);   
                   }
                 }
@@ -100,7 +109,7 @@ public class Main extends Application {
             }
         }
 
-        player = createEntity(LevelData.player_start_pos[Current_Level][0], LevelData.player_start_pos[Current_Level][1], 40, 40, "tutorial14/texture/bad.png");
+        player = createEntity(LevelData.player_start_pos[Current_Level][0], LevelData.player_start_pos[Current_Level][1], player_wide, player_tall, "tutorial14/texture/Assassin.GIF");
 
         player.translateXProperty().addListener((obs, old, newValue) -> {
             int offset = newValue.intValue();
@@ -110,7 +119,7 @@ public class Main extends Application {
             }
         });
 
-        appRoot.getChildren().addAll( gameRoot, uiRoot);// bg,
+        appRoot.getChildren().addAll( uiRoot , gameRoot);// bg,
     }
 
     private void update() {
@@ -126,7 +135,7 @@ public class Main extends Application {
             movePlayerX(-5);
         }
 
-        if (isPressed(KeyCode.D) && player.getTranslateX() + 40 <= levelWidth - 5) {
+        if (isPressed(KeyCode.D) && player.getTranslateX() + player_wide <= levelWidth - 5) {
             movePlayerX(5);
         }
 
@@ -160,12 +169,12 @@ public class Main extends Application {
             for (Node platform : platforms) {
                 if (player.getBoundsInParent().intersects(platform.getBoundsInParent())) {
                     if (movingRight) {
-                        if (player.getTranslateX() + 40 == platform.getTranslateX()) {
+                        if (player.getTranslateX() + player_wide == platform.getTranslateX()) {
                             return;
                         }
                     }
                     else {
-                        if (player.getTranslateX() == platform.getTranslateX() + 60) {
+                        if (player.getTranslateX() == platform.getTranslateX() + stage_wide) {
                             return;
                         }
                     }
@@ -182,14 +191,14 @@ public class Main extends Application {
             for (Node platform : platforms) {
                 if (player.getBoundsInParent().intersects(platform.getBoundsInParent())) {
                     if (movingDown) {
-                        if (player.getTranslateY() + 40 == platform.getTranslateY()) {
+                        if (player.getTranslateY() + player_tall == platform.getTranslateY()) {
                             player.setTranslateY(player.getTranslateY() - 1);
                             canJump = true;
                             return;
                         }
                     }
                     else {
-                        if (player.getTranslateY() == platform.getTranslateY() + 60) {
+                        if (player.getTranslateY() == platform.getTranslateY() + stage_tall) {
                             return;
                         }
                     }
