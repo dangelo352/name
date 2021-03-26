@@ -26,6 +26,7 @@ import javafx.scene.Group;
 import javafx.scene.Scene; 
 import javafx.scene.image.*; 
 import javafx.stage.Stage;  
+import javafx.scene.layout.StackPane; 
 
 import javafx.scene.paint.ImagePattern;
 
@@ -51,9 +52,6 @@ public class Main extends Application {
 
     private boolean dialogEvent = false, running = true;
     
-    
-    
-    
     private void initContent() {
         Rectangle bg = new Rectangle(1280, 720);
 
@@ -67,7 +65,7 @@ public class Main extends Application {
                     case '0':
                         break;
                     case '1':
-                        Node platform = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/good.png" );
+                        Node platform = createEntity(j*60, i*60, 60, 60, "tutorial14/texture/gras.gif" );
                         platforms.add(platform);
                         break;
                     case '2':
@@ -189,14 +187,7 @@ public class Main extends Application {
         try{
         Image image = new Image(new FileInputStream(texture));
         entity.setFill(new ImagePattern(image));  
-        }catch(FileNotFoundException e){
-        //System.out.print("error" + e+"\n");
-        //File test=new File("unik.png");
-        //try{test.createNewFile();}catch(Exception a){}
-        //System.out.println("File created: " + test.getName());          //this is code for debbugging it will make a texture file that dosent isist with the name unik so u can queary for it in the file explorrer dont uncomment becase if this code runs it wil break everything but i still need it if shit hits the fan and idk where my texures are being drawn from
-        }
-        
-        
+        }catch(FileNotFoundException e){}
         gameRoot.getChildren().add(entity);
         return entity;
     }
@@ -208,7 +199,9 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         initContent();  
-    
+        
+        StackPane stackPane = new StackPane();
+        
         Scene scene = new Scene(appRoot);
         scene.setOnKeyPressed(event -> keys.put(event.getCode(), true));
         scene.setOnKeyReleased(event -> keys.put(event.getCode(), false));
@@ -245,7 +238,7 @@ public class Main extends Application {
         timer.start();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args){
         launch(args);
     }
 }
