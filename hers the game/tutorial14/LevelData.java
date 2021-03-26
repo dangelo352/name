@@ -19,6 +19,22 @@ public class LevelData {
     {
         {
          //level 1
+         "                               ",
+         "                               ",
+         "                               ",
+         "                               ",
+         "                               ",
+         "                               ",
+         "                               ",
+         "                               ",
+         "                               ",
+         "     HHH                       ",
+         "HHHHHXXXHHHH  HHHHHHHH HH H H2H",
+         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+         "                               "
+        },
+        {
+         //level 2
          "                                 ",
          "                                 ",
          "                                 ",
@@ -34,7 +50,7 @@ public class LevelData {
          "              111     11         "
         },
         {
-        //level 2
+        //level 3
          "                                 ",
          "                                 ",
          "                                 ",

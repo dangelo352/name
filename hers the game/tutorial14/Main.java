@@ -55,8 +55,8 @@ public class Main extends Application {
     public int Current_Level = 0;
     
     //these control physics objects sise
-    public int stage_tall = 60;
-    public int stage_wide = 60;
+    public int stage_tall = 61;
+    public int stage_wide = 61;
     
     //this controlls player sise
     public int player_tall = 60;
