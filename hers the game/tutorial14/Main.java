@@ -195,7 +195,7 @@ public class Main extends Application {
         //try{test.createNewFile();}catch(Exception a){}
         //System.out.println("File created: " + test.getName());          //this is code for debbugging it will make a texture file that dosent isist with the name unik so u can queary for it in the file explorrer dont uncomment becase if this code runs it wil break everything but i still need it if shit hits the fan and idk where my texures are being drawn from
         }
-         
+        
         
         gameRoot.getChildren().add(entity);
         return entity;
@@ -207,9 +207,7 @@ public class Main extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception {
-        initContent();
-        
-          
+        initContent();  
     
         Scene scene = new Scene(appRoot);
         scene.setOnKeyPressed(event -> keys.put(event.getCode(), true));
