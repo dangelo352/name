@@ -59,8 +59,8 @@ public class Main extends Application {
     public int stage_wide = 61;
     
     //this controlls player sise
-    public int player_tall = 60;
-    public int player_wide = 40;
+    public int player_tall = 80;
+    public int player_wide = 60;
     
     
     private void initContent() {
