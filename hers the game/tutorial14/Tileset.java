@@ -11,7 +11,8 @@ public class Tileset {
     //make new tile ( name , Char you want to use in the level data , path to texture) , <-- add comma to all but last one
     new Tile("grass02" ,'#',"tutorial14/texture/good.png"),     //<--here and down u can change
     new Tile("grass",'1',"tutorial14/texture/gras.gif"),
-    new Tile("grass",'X',"tutorial14/texture/forest/BlueJiggleGrass.GIF")
+    new Tile("grass",'X',"tutorial14/texture/forest/BlueJiggleGrass.GIF"),
+    new Tile("BlueDirt", 'Y', "tutorial14/texture/forest/BlueDirt.PNG")
               
     };
     public static Tile NoColTiles[] = 
