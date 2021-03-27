@@ -46,7 +46,9 @@ public class Main extends Application {
     private Pane uiRoot = new Pane();
 
     private Rectangle player;
+    private Rectangle s;
     private Point2D playerVelocity = new Point2D(0, 0);
+      private Point2D sVelocity = new Point2D(0, 0);
     private boolean canJump = true;
 
     private int levelWidth;
@@ -63,6 +65,9 @@ public class Main extends Application {
     //this controlls player size
     public int player_tall = 80;
     public int player_wide = 59;
+    public int s_tall = 80;
+    public int s_wide = 59;
+
     
     //player animation toggles
     public Boolean Is_idle = true;
@@ -136,6 +141,23 @@ public class Main extends Application {
 
         appRoot.getChildren().addAll( uiRoot , gameRoot);
     }
+    private void shoot() {
+         
+              
+
+            if(!Is_idle){
+           try{
+           Image image = new Image(new FileInputStream("tutorial14/texture/player/red.png"));
+           player.setFill( new ImagePattern(image));  
+           }catch(FileNotFoundException e){} }
+           Is_idle = true;
+
+                    s = createEntity(LevelData.s_start_pos[Current_Level][0], LevelData.s_start_pos[Current_Level][1], s_wide, s_tall, "tutorial14/texture/player/Assassin.GIF");
+
+
+;
+    
+    }
 
     private void update() {
         Boolean keyA = isPressed(KeyCode.A);
@@ -152,6 +174,7 @@ public class Main extends Application {
            Is_idle = true;
            is_running_direction=0;
         }
+        
         if (keyA&&!keyD && player.getTranslateX() >= 5) {
             movePlayerX(-5);
             if(1!=is_running_direction){
@@ -166,6 +189,10 @@ public class Main extends Application {
 
         if (isPressed(KeyCode.W) && player.getTranslateY() >= 5) {
             jumpPlayer();
+          
+        }
+        if (isPressed(KeyCode.SPACE)){
+        shoot();
         }
 
         if (keyD&&!keyA&& player.getTranslateX() + player_wide <= levelWidth - 5) {
@@ -256,7 +283,8 @@ public class Main extends Application {
 
     private void movePlayerY(int value) {
         boolean movingDown = value > 0;
-
+        try {
+            Thread.sleep(5);
         for (int i = 0; i < Math.abs(value); i++) {
             for (Node platform : platforms) {
                 if (player.getBoundsInParent().intersects(platform.getBoundsInParent())) {
@@ -277,13 +305,31 @@ public class Main extends Application {
             player.setTranslateY(player.getTranslateY() + (movingDown ? 1 : -1));
         }
     }
+        catch(Exception e){
+        return ;
+        }
+    }
 
     private void jumpPlayer() {
+    try {
+        Thread.sleep(5);
         if (canJump) {
             playerVelocity = playerVelocity.add(0, -30);
             canJump = false;
+            }
+
+                 }catch(Exception e){
+        return ;
         }
-    }
+     }
+      
+        
+
+        
+
+  
+
+
 
     private Rectangle createEntity(int x, int y, int w, int h, String texture) {
         Rectangle entity = new Rectangle(w, h);
@@ -298,7 +344,7 @@ public class Main extends Application {
         gameRoot.getChildren().add(entity);
         return entity;
     }
-
+  
     private boolean isPressed(KeyCode key) {
         return keys.getOrDefault(key, false);
     }

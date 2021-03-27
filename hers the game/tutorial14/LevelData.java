@@ -8,6 +8,12 @@ public class LevelData {
       {0,500},  //level 2 start etc.
       {0,500}
     };
+     public static int s_start_pos[][] ={
+      {400,500}, //level 1 start position (x,y)
+      {0,500},  //level 2 start etc.
+      {0,500}
+    };
+
     
     public static String background_img[] ={
       "tutorial14/texture/forest/lvl1_background.PNG", //level 1 background img file path goes here (should look like: "tutorial14/texture/filename.extention") 
