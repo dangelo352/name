@@ -44,7 +44,7 @@ public class Main extends Application {
     private Pane gameRoot = new Pane();
     private Pane uiRoot = new Pane();
 
-    private Node player;
+    private Rectangle player;
     private Point2D playerVelocity = new Point2D(0, 0);
     private boolean canJump = true;
 
@@ -55,12 +55,17 @@ public class Main extends Application {
     public int Current_Level = 0;
     
     //these control physics objects sise
-    public int stage_tall = 61;
-    public int stage_wide = 61;
+    public int stage_tall = 60;
+    public int stage_wide = 60;
     
     //this controlls player sise
     public int player_tall = 80;
     public int player_wide = 60;
+    
+    //player animation toggles
+    public Boolean Is_idle = false;
+    public Boolean Is_Running_left = false;
+    public Boolean Is_Running_right = false;
     
     
     private void initContent() {
@@ -119,24 +124,52 @@ public class Main extends Application {
             }
         });
 
-        appRoot.getChildren().addAll( uiRoot , gameRoot);// bg,
+        appRoot.getChildren().addAll( uiRoot , gameRoot);
     }
 
     private void update() {
+        
+        if(!isPressed(KeyCode.A)&&!isPressed(KeyCode.D)&&!isPressed(KeyCode.S)&&!isPressed(KeyCode.W))
+        {
+           if(!Is_idle){
+           try{
+           Image image = new Image(new FileInputStream("tutorial14/texture/Assassin.GIF"));
+           player.setFill( new ImagePattern(image));  
+           }catch(FileNotFoundException e){} }
+           Is_idle = true;
+           Is_Running_right = false;
+           Is_Running_left = false;
+        }
+        
         if (isPressed(KeyCode.W) && player.getTranslateY() >= 5) {
             jumpPlayer();
         }
-        if (isPressed(KeyCode.SPACE) && player.getTranslateY() >= 5) {
-            jumpPlayer();
-
-        }
-
         if (isPressed(KeyCode.A) && player.getTranslateX() >= 5) {
             movePlayerX(-5);
+            
+            if(!Is_Running_right){
+               try{
+               Image image = new Image(new FileInputStream("tutorial14/texture/PlayerRunLeft.GIF"));
+               player.setFill( new ImagePattern(image));  
+               }catch(FileNotFoundException e){}
+               Is_Running_right = true;
+            }
+            Is_idle = false;
+            Is_Running_left = false;
         }
 
         if (isPressed(KeyCode.D) && player.getTranslateX() + player_wide <= levelWidth - 5) {
             movePlayerX(5);
+            
+            if(!Is_Running_right){
+               try{
+               Image image = new Image(new FileInputStream("tutorial14/texture/PlayerRunRight.GIF"));
+               player.setFill( new ImagePattern(image));  
+               }catch(FileNotFoundException e){}  
+            }
+            Is_idle = false;
+            Is_Running_left = false;
+            Is_Running_right = true;
         }
 
         if (playerVelocity.getY() < 10) {
@@ -215,7 +248,7 @@ public class Main extends Application {
         }
     }
 
-    private Node createEntity(int x, int y, int w, int h, String texture) {
+    private Rectangle createEntity(int x, int y, int w, int h, String texture) {
         Rectangle entity = new Rectangle(w, h);
         entity.setTranslateX(x);
         entity.setTranslateY(y);
