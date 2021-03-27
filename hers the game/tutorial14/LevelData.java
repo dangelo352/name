@@ -6,7 +6,8 @@ public class LevelData {
     public static int player_start_pos[][] ={
       {400,500}, //level 1 start position (x,y)
       {0,500},  //level 2 start etc.
-      {0,500}
+      {0,500},
+      {0,320}
     };
      public static int s_start_pos[][] ={
       {400,500}, //level 1 start position (x,y)
@@ -67,10 +68,27 @@ public class LevelData {
          "           111    11  11         ",
          "                                 ",
          " 1      ###                      ",
-         "      M      111                 ",
+         "     2M      111                 ",
          "     111           111  111      ",
          "11111111111111   11111  111111111",
          "              111     11         "        
+        },
+        {
+        //level 4 (Hills Level: A)
+         "                                                     Y     Y",
+         "                     HHH                                   Y",
+         "                     XXZ                         HHHHH     Y",
+         "   HHHHHHHHHHHH        Y                         XXXXZ     Y",
+         "   XXXXXXXXXXXZ      HHYHHMHHHHH   HHHHHH   HHHHHYYYYY     Y",
+         "   YYYYYYYYYYY       XXYXXXXXXXZ   XXXXXZ   XXXXXYYYYY    2Y",
+         "HHHYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYHHHHHY",
+         "XXXYYYYYYYYYYY       HHYYYYYYYYY   YYYYYY   YYYYYYYYYYXXXXXY",
+         "YYYYYYYYYYYYYY       XXYYYYYYYYY   YYYYYY   YYYYYYYYYYYYYYYY",
+         "YYYYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYYYYYYY",
+         "YYYYYYYYYYYYYYHHHHHHHHHYYYYYYYYYMMMYYYYYYMMMYYYYYYYYYYYYYYYY",
+         "YYYYYYYYYYYYYYXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+         "Y                                " 
+        //1   5    10   15   20   25   30   35   40   45   50   55   60       
         }
    };
    
