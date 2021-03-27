@@ -28,10 +28,10 @@ public class Tileset {
     new Tile("HillDirt", 'I', "tutorial14/texture/hills/HillDirt.PNG"),
     new Tile("HillGrass", 'J', "tutorial14/texture/hills/HillGrass.GIF"),
     new Tile("HillTopGrass", 'K', "tutorial14/texture/hills/HillTopGrass.GIF"),
-    new Tile("HillLeftCorner", 'L', "tutorial14/texture/hills/HillLeftCorner"),
-    new Tile("HillLeftGrass", 'O', "tutorial14/texture/hills/HillLeftGrass"),
-    new Tile("HillRightCorner", 'T', "tutorial14/texture/hills/HillRightCorner"),
-    new Tile("HillRightGrass", 'U', "tutorial14/texture/hills/HillRightGrass")
+    new Tile("HillLeftCorner", 'L', "tutorial14/texture/hills/HillLeftCorner.GIF"),
+    new Tile("HillLeftGrass", 'O', "tutorial14/texture/hills/HillLeftGrass.GIF"),
+    new Tile("HillRightCorner", 'T', "tutorial14/texture/hills/HillRightCorner.GIF"),
+    new Tile("HillRightGrass", 'U', "tutorial14/texture/hills/HillRightGrass.GIF")
               
     };
     public static Tile NoColTiles[] = 
