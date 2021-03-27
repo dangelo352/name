@@ -132,7 +132,7 @@ public class Main extends Application {
         Boolean keyW = isPressed(KeyCode.W);
         Boolean keyS = isPressed(KeyCode.S);
         
-        if((!keyA&&!keyD&&!keyS&&!keyW))
+        if((!keyA&&!keyD&&!keyS&&!keyW)||(keyA&&keyD))
         {
            if(!Is_idle){
            try{
