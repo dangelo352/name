@@ -10,7 +10,7 @@ public class LevelData {
     };
     
     public static String background_img[] ={
-      "tutorial14/texture/lvl1_background.PNG", //level 1 background img file path goes here (should look like: "tutorial14/texture/filename.extention") 
+      "tutorial14/texture/forest/lvl1_background.PNG", //level 1 background img file path goes here (should look like: "tutorial14/texture/filename.extention") 
       ""  //level 2 background etc.
     };
     
@@ -32,7 +32,7 @@ public class LevelData {
          "     HHH             ",
          "HHHHHXXXHHHH  HHH HH2",
          "XXXXXXXXXXXXXXXXXXXXX",
-         "                          "
+         "                     "
         },
         {
          //level 2
