@@ -60,12 +60,11 @@ public class Main extends Application {
     
     //this controlls player sise
     public int player_tall = 80;
-    public int player_wide = 60;
+    public int player_wide = 59;
     
     //player animation toggles
-    public Boolean Is_idle = false;
-    public Boolean Is_Running_left = false;
-    public Boolean Is_Running_right = false;
+    public Boolean Is_idle = true;
+    public Boolean is_running_direction = true;//false = right true = left
     
     
     private void initContent() {
@@ -128,8 +127,12 @@ public class Main extends Application {
     }
 
     private void update() {
+        Boolean keyA = isPressed(KeyCode.A);
+        Boolean keyD = isPressed(KeyCode.D);
+        Boolean keyW = isPressed(KeyCode.W);
+        Boolean keyS = isPressed(KeyCode.S);
         
-        if(!isPressed(KeyCode.A)&&!isPressed(KeyCode.D)&&!isPressed(KeyCode.S)&&!isPressed(KeyCode.W))
+        if((!keyA&&!keyD&&!keyS&&!keyW))
         {
            if(!Is_idle){
            try{
@@ -137,39 +140,37 @@ public class Main extends Application {
            player.setFill( new ImagePattern(image));  
            }catch(FileNotFoundException e){} }
            Is_idle = true;
-           Is_Running_right = false;
-           Is_Running_left = false;
+           
         }
         
         if (isPressed(KeyCode.W) && player.getTranslateY() >= 5) {
             jumpPlayer();
         }
-        if (isPressed(KeyCode.A) && player.getTranslateX() >= 5) {
+        if (keyA&&!keyD && player.getTranslateX() >= 5) {
             movePlayerX(-5);
             
-            if(!Is_Running_right){
+            if(!is_running_direction){
                try{
                Image image = new Image(new FileInputStream("tutorial14/texture/PlayerRunLeft.GIF"));
                player.setFill( new ImagePattern(image));  
                }catch(FileNotFoundException e){}
-               Is_Running_right = true;
+               
             }
             Is_idle = false;
-            Is_Running_left = false;
+            is_running_direction = true;
         }
 
         if (isPressed(KeyCode.D) && player.getTranslateX() + player_wide <= levelWidth - 5) {
             movePlayerX(5);
             
-            if(!Is_Running_right){
+            if(is_running_direction){
                try{
                Image image = new Image(new FileInputStream("tutorial14/texture/PlayerRunRight.GIF"));
                player.setFill( new ImagePattern(image));  
                }catch(FileNotFoundException e){}  
             }
             Is_idle = false;
-            Is_Running_left = false;
-            Is_Running_right = true;
+            is_running_direction = false;
         }
 
         if (playerVelocity.getY() < 10) {
