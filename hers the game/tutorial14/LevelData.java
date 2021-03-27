@@ -70,16 +70,16 @@ public class LevelData {
         {
         //level 4 (Hills Level: A)
          "                                                     Y     Y",
-         "                                                           Y",
-         "                     XXY                                   Y",
-         "                       Y                         XXXXX     Y",
-         "   XXXXXXXXXXXX        Y  M                      YYYYY     Y",
-         "   YYYYYYYYYYY       XXYXXXXXXXX   XXXXXX   XXXXXYYYYY     Y",
-         "   YYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYY    2Y",
-         "XXXYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYXXXXXY",
+         "                     HHH                                   Y",
+         "                     XXZ                         HHHHH     Y",
+         "   HHHHHHHHHHHH        Y                         XXXXZ     Y",
+         "   XXXXXXXXXXXZ      HHYHHMHHHHH   HHHHHH   HHHHHYYYYY     Y",
+         "   YYYYYYYYYYY       XXYXXXXXXXZ   XXXXXZ   XXXXXYYYYY    2Y",
+         "HHHYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYHHHHHY",
+         "XXXYYYYYYYYYYY       HHYYYYYYYYY   YYYYYY   YYYYYYYYYYXXXXXY",
          "YYYYYYYYYYYYYY       XXYYYYYYYYY   YYYYYY   YYYYYYYYYYYYYYYY",
          "YYYYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYYYYYYY",
-         "YYYYYYYYYYYYYY         YYYYYYYYYMMMYYYYYYMMMYYYYYYYYYYYYYYYY",
+         "YYYYYYYYYYYYYYHHHHHHHHHYYYYYYYYYMMMYYYYYYMMMYYYYYYYYYYYYYYYY",
          "YYYYYYYYYYYYYYXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
          "Y                                " 
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
