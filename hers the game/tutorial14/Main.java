@@ -52,7 +52,7 @@ public class Main extends Application {
     private int levelWidth;
 
     private boolean dialogEvent = false, running = true;
-    private boolean dialogEvent1 = false, running1 = true;
+    private boolean dialogEvent1 = false; 
     
     public int Current_Level = 0;
     
@@ -67,7 +67,6 @@ public class Main extends Application {
     //player animation toggles
     public Boolean Is_idle = true;
     public int is_running_direction = 0;//no = 0 left = 1 right = 2 
-    
     
     private void initContent() {
       gameRoot.getChildren().clear();
@@ -107,16 +106,11 @@ public class Main extends Application {
                 
                 for(int k=0; k<Tileset.EnemyTile.length; k++) {
                   if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
-
-                
                 
                   Node enemy = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
-                  
 
                   //litrlaly make platform with strong from tileset ckass
                   enemys.add(enemy); 
-            
-  
 
                   }
                 }
@@ -210,7 +204,7 @@ public class Main extends Application {
             if (player.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
                 enemy.getProperties().put("alive", false);
                 dialogEvent1 = true;
-                running1 = false;
+                
 
             }
         }
@@ -222,8 +216,7 @@ public class Main extends Application {
                 gameRoot.getChildren().remove(enemy);
                     Current_Level =0;
                     initContent();
-                    running1 = true;
-
+                    
                
                 }
            }
@@ -347,15 +340,12 @@ public class Main extends Application {
             }
         
         public void handle1(long now1) {
-                if (running1) {
-                    update();
-                }
-
+                
                 if (dialogEvent1) {
                     dialogEvent1 = false;
                     Current_Level +=0;
                     initContent();
-                    running1 = true;
+                    //running1 = true;
                     }
             }
         };
