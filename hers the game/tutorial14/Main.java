@@ -123,12 +123,7 @@ public class Main extends Application {
     }
 
     private void update() {
-        if (isPressed(KeyCode.W) && player.getTranslateY() >= 5 && player = createEntity(LevelData.player_start_pos[Current_Level][0], LevelData.player_start_pos[Current_Level][1], player_wide, player_tall, "tutorial14/texture/Assassin.GIF");
- 
-            
-
-        }
-) {
+        if (isPressed(KeyCode.W) && player.getTranslateY() >= 5) {
             jumpPlayer();
         }
         if (isPressed(KeyCode.SPACE) && player.getTranslateY() >= 5) {
@@ -138,36 +133,15 @@ public class Main extends Application {
 
         if (isPressed(KeyCode.A) && player.getTranslateX() >= 5) {
             movePlayerX(-5);
-            try 
-            {
-            
-            Image image = new Image(new FileInputStream("tutorial14/texture/PlayerRunLeft.gif"));  
-             
-
-  
-      
-      ImageView imageView = new ImageView(image);     
-            }catch (FileNotFoundException ex)  
-        {
-                    player = createEntity(LevelData.player_start_pos[Current_Level][0], LevelData.player_start_pos[Current_Level][1], player_wide, player_tall, "tutorial14/texture/Assassin.GIF");
- 
-            
-
         }
-        }
-     
+
         if (isPressed(KeyCode.D) && player.getTranslateX() + player_wide <= levelWidth - 5) {
             movePlayerX(5);
-             
-
-              
-           
         }
 
         if (playerVelocity.getY() < 10) {
             playerVelocity = playerVelocity.add(0, 1);
         }
-
 
         movePlayerY((int)playerVelocity.getY());
 
@@ -241,7 +215,6 @@ public class Main extends Application {
         }
     }
 
-
     private Node createEntity(int x, int y, int w, int h, String texture) {
         Rectangle entity = new Rectangle(w, h);
         entity.setTranslateX(x);
@@ -255,9 +228,6 @@ public class Main extends Application {
         gameRoot.getChildren().add(entity);
         return entity;
     }
- 
-
-
 
     private boolean isPressed(KeyCode key) {
         return keys.getOrDefault(key, false);
