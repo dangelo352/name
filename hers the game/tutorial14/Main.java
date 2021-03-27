@@ -64,7 +64,7 @@ public class Main extends Application {
     
     //player animation toggles
     public Boolean Is_idle = true;
-    public Boolean is_running_direction = true;//false = right true = left
+    public int is_running_direction = 0;//no = 0 left = 1 right = 2 
     
     
     private void initContent() {
@@ -104,7 +104,6 @@ public class Main extends Application {
                 
                 for(int k=0; k<Tileset.EnemyTile.length; k++) {
                   if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
-                
                   Node coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); //litrlaly make platform with strong from tileset ckass
                   coins.add(coin);   
                   }
@@ -113,7 +112,7 @@ public class Main extends Application {
             }
         }
 
-        player = createEntity(LevelData.player_start_pos[Current_Level][0], LevelData.player_start_pos[Current_Level][1], player_wide, player_tall, "tutorial14/texture/Assassin.GIF");
+        player = createEntity(LevelData.player_start_pos[Current_Level][0], LevelData.player_start_pos[Current_Level][1], player_wide, player_tall, "tutorial14/texture/player/Assassin.GIF");
 
         player.translateXProperty().addListener((obs, old, newValue) -> {
             int offset = newValue.intValue();
@@ -131,52 +130,50 @@ public class Main extends Application {
         Boolean keyD = isPressed(KeyCode.D);
         Boolean keyW = isPressed(KeyCode.W);
         Boolean keyS = isPressed(KeyCode.S);
-        
         if((!keyA&&!keyD&&!keyS&&!keyW)||(keyA&&keyD))
         {
            if(!Is_idle){
            try{
-           Image image = new Image(new FileInputStream("tutorial14/texture/Assassin.GIF"));
+           Image image = new Image(new FileInputStream("tutorial14/texture/player/Assassin.GIF"));
            player.setFill( new ImagePattern(image));  
            }catch(FileNotFoundException e){} }
            Is_idle = true;
-           
-        }
-        
-        if (isPressed(KeyCode.W) && player.getTranslateY() >= 5) {
-            jumpPlayer();
+           is_running_direction=0;
         }
         if (keyA&&!keyD && player.getTranslateX() >= 5) {
             movePlayerX(-5);
-            
-            if(!is_running_direction){
+            if(1!=is_running_direction){
                try{
-               Image image = new Image(new FileInputStream("tutorial14/texture/PlayerRunLeft.GIF"));
+               Image image = new Image(new FileInputStream("tutorial14/texture/player/PlayerRunLeft.GIF"));
                player.setFill( new ImagePattern(image));  
                }catch(FileNotFoundException e){}
-               
             }
             Is_idle = false;
-            is_running_direction = true;
+            is_running_direction = 1;
         }
 
-        if (isPressed(KeyCode.D) && player.getTranslateX() + player_wide <= levelWidth - 5) {
+        if (isPressed(KeyCode.W) && player.getTranslateY() >= 5) {
+            jumpPlayer();
+        }
+
+        if (keyD&&!keyA&& player.getTranslateX() + player_wide <= levelWidth - 5) {
             movePlayerX(5);
             
-            if(is_running_direction){
+            if(is_running_direction != 2){
                try{
-               Image image = new Image(new FileInputStream("tutorial14/texture/PlayerRunRight.GIF"));
+               Image image = new Image(new FileInputStream("tutorial14/texture/player/PlayerRunRight.GIF"));
                player.setFill( new ImagePattern(image));  
                }catch(FileNotFoundException e){}  
             }
             Is_idle = false;
-            is_running_direction = false;
+            is_running_direction = 2;
         }
 
         if (playerVelocity.getY() < 10) {
             playerVelocity = playerVelocity.add(0, 1);
         }
-
+        
+       
         movePlayerY((int)playerVelocity.getY());
 
         for (Node coin : coins) {
