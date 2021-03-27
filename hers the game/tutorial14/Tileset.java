@@ -12,7 +12,9 @@ public class Tileset {
     new Tile("grass02" ,'#',"tutorial14/texture/good.png"),     //<--here and down u can change
     new Tile("grass",'1',"tutorial14/texture/gras.gif"),
     new Tile("grass",'X',"tutorial14/texture/forest/BlueJiggleGrass.GIF"),
-    new Tile("BlueDirt", 'Y', "tutorial14/texture/forest/BlueDirt.PNG")
+    new Tile("BlueDirt", 'Y', "tutorial14/texture/forest/BlueDirt.PNG"),
+    new Tile("BlueTopGrass", 'Z', "tutorial14/texture/forest/BlueTopGrass.GIF"),
+    new Tile("CornerBlueGrass", 'W', "tutorial14/texture/forest/CornerBlueGrass.GIF"),
               
     };
     public static Tile NoColTiles[] = 
