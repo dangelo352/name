@@ -13,7 +13,16 @@ public class Tileset {
     new Tile("grass",'1',"tutorial14/texture/gras.gif"),
     new Tile("grass",'X',"tutorial14/texture/forest/BlueJiggleGrass.GIF"),
     new Tile("BlueDirt", 'Y', "tutorial14/texture/forest/BlueDirt.PNG"),
-    new Tile("CornerBlueGrass", 'Z', "tutorial14/texture/forest/CornerBlueGrass.GIF"),
+    new Tile("CornerBlueGrass", 'P', "tutorial14/texture/forest/CornerBlueGrass.GIF"),
+    new Tile("CornerBlueGrassBL", 'Q', "tutorial14/texture/forest/CornerBlueGrassBL.GIF"),
+    new Tile("CornerBlueGrassBR", 'R', "tutorial14/texture/forest/CornerBlueGrassBR.GIF"),
+    new Tile("CornerBlueGrassTL", 'S', "tutorial14/texture/forest/CornerBlueGrassTL.GIF"),
+    new Tile("CastleDirt", 'A', "tutorial14/texture/castle/CastleDirt.PNG"),
+    new Tile("CastleFloor", 'C', "tutorial14/texture/castle/CastleFloor.PNG"),
+    new Tile("CastleFloorL", 'B', "tutorial14/texture/castle/CastleFloorL.PNG"),
+    new Tile("CastleFloorR", 'D', "tutorial14/texture/castle/CastleFloorR.PNG"),
+    new Tile("WoodDirt", 'E', "tutorial14/texture/shop/WoodDirt.PNG"),
+    new Tile("WoodTile", 'F', "tutorial14/texture/shop/WoodTile.PNG")
               
     };
     public static Tile NoColTiles[] = 
