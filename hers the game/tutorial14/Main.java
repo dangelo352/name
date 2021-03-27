@@ -39,6 +39,7 @@ public class Main extends Application {
 
     private ArrayList<Node> platforms = new ArrayList<Node>();
     private ArrayList<Node> coins = new ArrayList<Node>();
+    private ArrayList<Node> enemys = new ArrayList<Node>();
 
     private Pane appRoot = new Pane();
     private Pane gameRoot = new Pane();
@@ -51,14 +52,15 @@ public class Main extends Application {
     private int levelWidth;
 
     private boolean dialogEvent = false, running = true;
+    private boolean dialogEvent1 = false, running1 = true;
     
     public int Current_Level = 0;
     
-    //these control physics objects sise
+    //these control physics objects size
     public int stage_tall = 60;
     public int stage_wide = 60;
     
-    //this controlls player sise
+    //this controlls player size
     public int player_tall = 80;
     public int player_wide = 59;
     
@@ -73,6 +75,7 @@ public class Main extends Application {
       appRoot.getChildren().clear();
       platforms.clear();
       coins.clear();
+      enemys.clear();
       
         levelWidth = LevelData.level_dat[Current_Level][0].length() * stage_wide;
          
@@ -104,8 +107,17 @@ public class Main extends Application {
                 
                 for(int k=0; k<Tileset.EnemyTile.length; k++) {
                   if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
-                  Node coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); //litrlaly make platform with strong from tileset ckass
-                  coins.add(coin);   
+
+                
+                
+                  Node enemy = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
+                  
+
+                  //litrlaly make platform with strong from tileset ckass
+                  enemys.add(enemy); 
+            
+  
+
                   }
                 }
                 
@@ -183,15 +195,42 @@ public class Main extends Application {
                 running = false;
             }
         }
+        
 
         for (Iterator<Node> it = coins.iterator(); it.hasNext(); ) {
             Node coin = it.next();
             if (!(Boolean)coin.getProperties().get("alive")) {
                 it.remove();
+                
                 gameRoot.getChildren().remove(coin);
             }
+            
         }
+        for (Node enemy : enemys) {
+            if (player.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
+                enemy.getProperties().put("alive", false);
+                dialogEvent1 = true;
+                running1 = false;
+
+            }
+        }
+
+        for (Iterator<Node> it = enemys.iterator(); it.hasNext(); ) {
+            Node enemy = it.next();
+            if (!(Boolean)enemy.getProperties().get("alive")) {
+                it.remove();
+                gameRoot.getChildren().remove(enemy);
+                    Current_Level =0;
+                    initContent();
+                    running1 = true;
+
+               
+                }
+           }
+        
+ 
     }
+    
 
     private void movePlayerX(int value) {
         boolean movingRight = value > 0;
@@ -306,7 +345,21 @@ public class Main extends Application {
                     running = true;
                     }
             }
+        
+        public void handle1(long now1) {
+                if (running1) {
+                    update();
+                }
+
+                if (dialogEvent1) {
+                    dialogEvent1 = false;
+                    Current_Level +=0;
+                    initContent();
+                    running1 = true;
+                    }
+            }
         };
+
         timer.start();
     }
 
