@@ -175,7 +175,7 @@ public class Main extends Application {
                try{
                Image image = new Image(new FileInputStream("tutorial14/texture/player/PlayerRunRight.GIF"));
                player.setFill( new ImagePattern(image));  
-               }catch(FileNotFoundException e){}  
+               }catch(FileNotFoundException e){}
             }
             Is_idle = false;
             is_running_direction = 2;
