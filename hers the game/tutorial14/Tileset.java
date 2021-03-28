@@ -19,8 +19,10 @@ public class Tileset {
     new Tile("RigtGrass", 'W', "tutorial14/texture/forest/RightGrass.GIF"),
     new Tile("LeftGrass", '1', "tutorial14/texture/forest/LeftGrass.GIF"),
     new Tile("ForestCeiling", ';', "tutorial14/texture/forest/ForestCeiling.GIF"),
-    new Tile("CeilingBottom", '3', "tutorial14/texture/forest/CeilingBottom.GIF"),
     new Tile("FloatingForestBlock", '4', "tutorial14/texture/forest/FloatingForestBlock.GIF"),
+    new Tile("RTripleGrass", '{', "tutorial14/texture/forest/RTripleGrass.GIF"),
+    new Tile("LTripleGrass", '}', "tutorial14/texture/forest/LTripleGrass.GIF"),
+    new Tile("MidRipleGrass", '~', "tutorial14/texture/forest/MidRipleGrass.GIF"),
     new Tile("CastleDirt", 'A', "tutorial14/texture/castle/CastleDirt.PNG"),
     new Tile("CastleFloor", 'C', "tutorial14/texture/castle/CastleFloor.PNG"),
     new Tile("CastleFloorL", 'B', "tutorial14/texture/castle/CastleFloorL.PNG"),
@@ -62,7 +64,8 @@ public class Tileset {
     {
     new Tile("air",'0',"" ),      // no change or add texture this is no texture
     new Tile("air",' ',"" ),      // this is more no texture
-    new Tile("grass",'H',"tutorial14/texture/forest/BlueTopGrass.GIF")  
+    new Tile("grass",'H',"tutorial14/texture/forest/BlueTopGrass.GIF"),
+    new Tile("CeilingBottom", '3', "tutorial14/texture/forest/CeilingBottom.GIF")  
     };
     public static Tile SpecialTile[] = 
     {
