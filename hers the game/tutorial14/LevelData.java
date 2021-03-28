@@ -17,73 +17,32 @@ public class LevelData {
     };
     
     public static String background_img[] ={
-      "tutorial14/texture/cave/CaveBackground.PNG", //level 1 background img file path goes here (should look like: "tutorial14/texture/filename.extention") 
+      "tutorial14/texture/forest/lvl1_background.PNG", //level 1 background img file path goes here (should look like: "tutorial14/texture/filename.extention") 
       "tutorial14/texture/forest/lvl1_background.PNG",
       "tutorial14/texture/forest/lvl1_background.PNG",
-      "tutorial14/texture/cave/CaveBackground.PNG",  //level 2 background etc.
-      "tutorial14/texture/forest/lvl1_background.PNG",
-      "tutorial14/texture/forest/lvl1_background.PNG",
+      "tutorial14/texture/forest/lvl1_background.PNG",  
+      "tutorial14/texture/hills/HillsBackground.PNG",
+      "tutorial14/texture/hills/HillsBackground.PNG",
+      "tutorial14/texture/hills/HillsBackground.PNG",
+      "tutorial14/texture/hills/HillsBackground.PNG",
+      "tutorial14/texture/mountin/MountainBackground.PNG",
+      "tutorial14/texture/mountin/MountainBackground.PNG",
+      "tutorial14/texture/mountin/MountainBackground.PNG",
+      "tutorial14/texture/mountin/MountainBackground.PNG",
       "tutorial14/texture/cave/CaveBackground.PNG",
-      "tutorial14/texture/forest/lvl1_background.PNG",
-      "tutorial14/texture/forest/lvl1_background.PNG",
       "tutorial14/texture/cave/CaveBackground.PNG",
-      "tutorial14/texture/forest/lvl1_background.PNG",
-      "tutorial14/texture/forest/lvl1_background.PNG",
-      "tutorial14/texture/cave/CaveBackground.PNG"
+      "tutorial14/texture/cave/CaveBackground.PNG",
+      "tutorial14/texture/cave/CaveBackground.PNG",
+      "tutorial14/texture/castle/CastleWalls.PNG",
+      "tutorial14/texture/castle/CastleWalls.PNG",
+      "tutorial14/texture/castle/CastleWalls.PNG",
+      "tutorial14/texture/castle/CastleWalls.PNG",
     };
     
     
     
     public static final String[][] level_dat = new String[][] 
     {
-        {
-         //level 1
-         "                     ",
-         "                     ",
-         "                     ",
-         "                     ",
-         "                     ",
-         "                     ",
-         "                     ",
-         "                     ",
-         "                     ",
-         "     HHH             ",
-         "HHHHHXXXHHHH  HHHoHH2",
-         "XXXXXXXXXXXXXXXXXXXXX",
-         "                     "
-        },
-        {
-         //level 2
-         "                                 ",
-         "                                 ",
-         "                                 ",
-         "                                 ",
-         "                                 ",
-         "                                 ",
-         "           111    11  11  1  1   ",
-         "   111                  1        ",
-         "        ###             1        ",
-         "     HHH     111    2   1        ",
-         "HHHHHXXX           111  111      ",
-         "XXXXX###111111  M11111  111111   ",
-         "              111     11         "
-        },
-        {
-        //level 3
-         "                                 ",
-         "                                 ",
-         "                                 ",
-         "                                 ",
-         "                                 ",
-         "                                 ",
-         "           111    11  11         ",
-         "                                 ",
-         " 1      ###                      ",
-         "     2M      111                 ",
-         "     111           111  111      ",
-         "11111111111111   11111  111111111",
-         "              111     11         "        
-        },
        {
          //level 4
        
@@ -219,8 +178,37 @@ public class LevelData {
          "F     F   F  FF      FFFF           F ",
          "F    F    FMMFF    MMFFFF          2F ",
          "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+        },
+        {
+        //level 12
+         "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV  ",
+         "    V                               V        V      ",
+         "    V                               VM   2   V     ",
+         "    V  VVVVVVVV  VVV  VVVVVVVVVVVV  V   VVV  V     ",
+         "    V      V                     V  V     V  V       ",
+         "    V      V                     V  VVV   V  V     ",
+         "    VVVV                         V        V  V  ",
+         "VVVV           VVVVVVVVVVVVVVV   V        V  V         ",
+         "V          VVVVVM                VVVVVVVVVV  V    ",
+         "V    VV                                      V        ",
+         "V    VV             M                        V     ",
+         "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
+        },
+        {
+                //level 12
+         "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV  ",
+         "    V                               V        V      ",
+         "    V                               VM       V     ",
+         "    V  VVVVVVVV  VV   VVVVVVVVVVVV  V   VVV  V     ",
+         "    V      V                     V  V     V  V       ",
+         "    V      V                     V  VVV   V  V     ",
+         "    VVVV            M            V        V  V  ",
+         "VVVV           VVVVVVVVVVVMVVV   V        V  V         ",
+         "V          VVVVV    M   M    M  MVVVVVVVVVV  V    ",
+         "V    VV                                      V        ",
+         "V    VV                                2     V     ",
+         "VVVVVVVVVVVVVVVVVVMVVVVMVVVMVVVVVVVVVVVVVVVVVVVVVV",
         }
-
 
    };
    
