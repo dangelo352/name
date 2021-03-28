@@ -71,9 +71,9 @@ public class LevelData {
         //level 4 (Hills Level: A)
          "                                                     Y     Y",
          "                     HHH                                   Y",
-         "                   X SXP                         HHHHH     Y",
-         "   HHHHHHHHHHHH  X     Y                         SXXXP     Y",
-         "   SXXXXXXXXXXPX     HHYHHMHHHHH   HHHHHH   HHHHHYYYYY     Y",
+         "                     SXP                         HHHHH     Y",
+         "   HHHHHHHHHHHH        Y                         SXXXP     Y",
+         "   SXXXXXXXXXXP      HHYHHMHHHHH   HHHHHH   HHHHHYYYYY     Y",
          "   YYYYYYYYYYY       SXYXXXXXXXP   SXXXXP   SXXXXYYYYY    2Y",
          "HHHYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYHHHHHY",
          "XXXYYYYYYYYYYY       HHYYYYYYYYY   YYYYYY   YYYYYYYYYYXXXXXY",
@@ -81,15 +81,15 @@ public class LevelData {
          "YYYYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYYYYYYY",
          "YYYYYYYYYYYYYYHHHHHHHHHYYYYYYYYYMMMYYYYYYMMMYYYYYYYYYYYYYYYY",
          "YYYYYYYYYYYYYYXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
-         "Y                                " 
+         "Y                                                           " 
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
         //level 5 (Hills Level: A)
          "                                                     Y     Y",
-         "                    XHHH                                   Y",
-         "                  X  SXP                         HHHHH     Y",
-         "   HHHHHHHHHHHH X      Y                         SXXXP     Y",
+         "                     HHH                                   Y",
+         "                     SXP                         HHHHH     Y",
+         "   HHHHHHHHHHHH        Y                         SXXXP     Y",
          "   SXXXXXXXXXXP      HHYHHXHHHHH   HHHHHH   HHHHHYYYYY     Y",
          "   YYYYYYYYYYY       SXYXXXXXXXP   SXXXXP   SXXXXYYYYY    2Y",
          "HHHYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYHHHHHY",

@@ -109,8 +109,6 @@ public class Main extends Application {
                   if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
                   
                   Node enemy = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
-                  
-                  //litrlaly make platform with strong from tileset ckass
                   enemys.add(enemy); 
                   
                   }
@@ -232,12 +230,14 @@ public class Main extends Application {
             if (!(Boolean)enemy.getProperties().get("alive")) {
                 it.remove();
                 gameRoot.getChildren().remove(enemy);
-                Current_Level =0;
+                   Current_Level =0;
                 initContent();
                 
                 }
            }
-    }
+        
+ 
+        }
     
     private void movePlayerX(int value) {
         boolean movingRight = value > 0;
@@ -369,7 +369,8 @@ public class Main extends Application {
                     dialogEvent1 = false;
                     Current_Level +=0;
                     initContent();
-                }
+                    //running1 = true;
+                    }
             }
         };
 
