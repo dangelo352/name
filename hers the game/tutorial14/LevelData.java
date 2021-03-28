@@ -7,14 +7,9 @@ public class LevelData {
       {400,500}, //level 1 start position (x,y)
       {0,500},  //level 2 start etc.
       {0,500},
+      {0,320},
       {0,320}
     };
-     public static int s_start_pos[][] ={
-      {400,500}, //level 1 start position (x,y)
-      {0,500},  //level 2 start etc.
-      {0,500}
-    };
-
     
     public static String background_img[] ={
       "tutorial14/texture/forest/lvl1_background.PNG", //level 1 background img file path goes here (should look like: "tutorial14/texture/filename.extention") 
@@ -77,9 +72,26 @@ public class LevelData {
         //level 4 (Hills Level: A)
          "                                                     Y     Y",
          "                     HHH                                   Y",
-         "                     SXP                         HHHHH     Y",
-         "   HHHHHHHHHHHH        Y                         SXXXP     Y",
-         "   SXXXXXXXXXXP      HHYHHMHHHHH   HHHHHH   HHHHHYYYYY     Y",
+         "                   X SXP                         HHHHH     Y",
+         "   HHHHHHHHHHHH  X     Y                         SXXXP     Y",
+         "   SXXXXXXXXXXPX     HHYHHMHHHHH   HHHHHH   HHHHHYYYYY     Y",
+         "   YYYYYYYYYYY       SXYXXXXXXXP   SXXXXP   SXXXXYYYYY    2Y",
+         "HHHYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYHHHHHY",
+         "XXXYYYYYYYYYYY       HHYYYYYYYYY   YYYYYY   YYYYYYYYYYXXXXXY",
+         "YYYYYYYYYYYYYY       SXYYYYYYYYY   YYYYYY   YYYYYYYYYYYYYYYY",
+         "YYYYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYYYYYYY",
+         "YYYYYYYYYYYYYYHHHHHHHHHYYYYYYYYYMMMYYYYYYMMMYYYYYYYYYYYYYYYY",
+         "YYYYYYYYYYYYYYXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
+         "Y                                " 
+        //1   5    10   15   20   25   30   35   40   45   50   55   60       
+        },
+        {
+        //level 5 (Hills Level: A)
+         "                                                     Y     Y",
+         "                    XHHH                                   Y",
+         "                  X  SXP                         HHHHH     Y",
+         "   HHHHHHHHHHHH X      Y                         SXXXP     Y",
+         "   SXXXXXXXXXXP      HHYHHXHHHHH   HHHHHH   HHHHHYYYYY     Y",
          "   YYYYYYYYYYY       SXYXXXXXXXP   SXXXXP   SXXXXYYYYY    2Y",
          "HHHYYYYYYYYYYY         YYYYYYYYY   YYYYYY   YYYYYYYYYYHHHHHY",
          "XXXYYYYYYYYYYY       HHYYYYYYYYY   YYYYYY   YYYYYYYYYYXXXXXY",
@@ -90,6 +102,7 @@ public class LevelData {
          "Y                                " 
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         }
+
    };
    
 }

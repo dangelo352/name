@@ -23,7 +23,7 @@ public class Tileset {
     new Tile("CastleFloorR", 'D', "tutorial14/texture/castle/CastleFloorR.PNG"),
     new Tile("WoodDirt", 'E', "tutorial14/texture/shop/WoodDirt.PNG"),
     new Tile("WoodTile", 'F', "tutorial14/texture/shop/WoodTile.PNG"),
-    new Tile("Hill4Sides", 'G', "tutorial14/texture/hills/Hill4Sides.GIF",
+    new Tile("Hill4Sides", 'G', "tutorial14/texture/hills/Hill4Sides.GIF"),
     new Tile("HillBottomGrass", 'N', "tutorial14/texture/hills/HillBottomGrass.GIF"),
     new Tile("HillDirt", 'I', "tutorial14/texture/hills/HillDirt.PNG"),
     new Tile("HillGrass", 'J', "tutorial14/texture/hills/HillGrass.GIF"),

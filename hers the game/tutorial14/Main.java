@@ -3,7 +3,6 @@ package tutorial14;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
-
 import javafx.stage.Stage;  
 import java.io.File;  
 import java.io.IOException;  
@@ -27,9 +26,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.*; 
 import javafx.stage.Stage;  
 import javafx.scene.layout.StackPane; 
-
 import javafx.scene.paint.ImagePattern;
-
 import java.io.FileNotFoundException; 
 
 
@@ -48,7 +45,7 @@ public class Main extends Application {
     private Rectangle player;
     private Rectangle s;
     private Point2D playerVelocity = new Point2D(0, 0);
-      private Point2D sVelocity = new Point2D(0, 0);
+    private Point2D sVelocity = new Point2D(0, 0);
     private boolean canJump = true;
 
     private int levelWidth;
@@ -108,18 +105,16 @@ public class Main extends Application {
                   }
                 }
                 
-                
                 for(int k=0; k<Tileset.EnemyTile.length; k++) {
                   if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
-                
+                  
                   Node enemy = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
-
+                  
                   //litrlaly make platform with strong from tileset ckass
                   enemys.add(enemy); 
-
+                  
                   }
                 }
-                
             }
         }
 
@@ -144,15 +139,12 @@ public class Main extends Application {
            Image image = new Image(new FileInputStream("tutorial14/texture/player/red.png"));
            player.setFill( new ImagePattern(image));  
            }catch(FileNotFoundException e){} }
-           Is_idle = true;
+           
+                    s = createEntity(600,400, s_wide, s_tall, "tutorial14/texture/player/Assassin.GIF");
 
-                    s = createEntity(LevelData.s_start_pos[Current_Level][0], LevelData.s_start_pos[Current_Level][1], s_wide, s_tall, "tutorial14/texture/player/Assassin.GIF");
-
-
-;
+   
+    } 
     
-    }
-
     private void update() {
         Boolean keyA = isPressed(KeyCode.A);
         Boolean keyD = isPressed(KeyCode.D);
@@ -315,13 +307,6 @@ public class Main extends Application {
         return ;
         }
      }
-      
-        
-
-        
-
-  
-
 
 
     private Rectangle createEntity(int x, int y, int w, int h, String texture) {
@@ -359,9 +344,7 @@ public class Main extends Application {
         stackPane.getChildren().add(shape);
         }catch(FileNotFoundException e){}
         
-
         stackPane.getChildren().add(appRoot);
-
         
         Scene scene = new Scene(stackPane);
         scene.setOnKeyPressed(event -> keys.put(event.getCode(), true));
