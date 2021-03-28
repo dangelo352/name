@@ -133,7 +133,6 @@ public class Main extends Application {
     }
     private void shoot() {
            
-           
            if(!Is_idle){
            try{
            Image image = new Image(new FileInputStream("tutorial14/texture/player/red.png"));
@@ -141,9 +140,9 @@ public class Main extends Application {
            }catch(FileNotFoundException e){} }
            
            if(is_running_direction==1){
-           dagga = createEntity((int)player.getLayoutX(),(int)player.getLayoutY(), 50, 20, "tutorial14/texture/DaggerLeft.PNG");
+           dagga = createEntity((int)player.getTranslateX(),(int)player.getTranslateY(), 50, 20, "tutorial14/texture/DaggerLeft.PNG");
            }else{
-           dagga = createEntity(600,400, 50, 20, "tutorial14/texture/DaggerRight.PNG");
+           dagga = createEntity((int)player.getTranslateX(),(int)player.getTranslateY(), 50, 20, "tutorial14/texture/DaggerRight.PNG");
            }
            daggas.add(dagga);
            
