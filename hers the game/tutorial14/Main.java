@@ -163,7 +163,7 @@ public class Main extends Application {
            Is_idle = true;
            is_running_direction=0;
         }
-        
+         
         if (keyA&&!keyD && player.getTranslateX() >= 5) {
             moveBoxX(-5,player);
             if(1!=is_running_direction){
