@@ -37,13 +37,14 @@ public class Main extends Application {
     private ArrayList<Node> platforms = new ArrayList<Node>();
     private ArrayList<Node> coins = new ArrayList<Node>();
     private ArrayList<Node> enemys = new ArrayList<Node>();
-
+    private ArrayList<Node> daggas = new ArrayList<Node>();
+    
     private Pane appRoot = new Pane();
     private Pane gameRoot = new Pane();
     private Pane uiRoot = new Pane();
 
     private Rectangle player;
-    private Rectangle s;
+    private Rectangle dagga;
     private Point2D playerVelocity = new Point2D(0, 0);
     private Point2D sVelocity = new Point2D(0, 0);
     private boolean canJump = true;
@@ -137,9 +138,8 @@ public class Main extends Application {
            player.setFill( new ImagePattern(image));  
            }catch(FileNotFoundException e){} }
            
-           
-           s = createEntity(600,400, s_wide, s_tall, "tutorial14/texture/player/Assassin.GIF");
-           
+           dagga = createEntity(600,400, s_wide, s_tall, "tutorial14/texture/player/Assassin.GIF");
+           daggas.add(dagga);
            
     } 
     
@@ -160,7 +160,7 @@ public class Main extends Application {
         }
         
         if (keyA&&!keyD && player.getTranslateX() >= 5) {
-            movePlayerX(-5);
+            moveBoxX(-5,player);
             if(1!=is_running_direction){
                try{
                Image image = new Image(new FileInputStream("tutorial14/texture/player/PlayerRunLeft.GIF"));
@@ -180,7 +180,7 @@ public class Main extends Application {
         }
 
         if (keyD&&!keyA&& player.getTranslateX() + player_wide <= levelWidth - 5) {
-            movePlayerX(5);
+            moveBoxX(5,player);
             
             if(is_running_direction != 2){
                try{
@@ -235,29 +235,27 @@ public class Main extends Application {
                 
                 }
            }
-        
- 
         }
     
-    private void movePlayerX(int value) {
+    private void moveBoxX(int value, Rectangle moveable) {
         boolean movingRight = value > 0;
 
         for (int i = 0; i < Math.abs(value); i++) {
             for (Node platform : platforms) {
-                if (player.getBoundsInParent().intersects(platform.getBoundsInParent())) {
+                if (moveable.getBoundsInParent().intersects(platform.getBoundsInParent())) {
                     if (movingRight) {
-                        if (player.getTranslateX() + player_wide == platform.getTranslateX()) {
+                        if (moveable.getTranslateX() + player_wide == platform.getTranslateX()) {
                             return;
                         }
                     }
                     else {
-                        if (player.getTranslateX() == platform.getTranslateX() + stage_wide) {
+                        if (moveable.getTranslateX() == platform.getTranslateX() + stage_wide) {
                             return;
                         }
                     }
                 }
             }
-            player.setTranslateX(player.getTranslateX() + (movingRight ? 1 : -1));
+            moveable.setTranslateX(player.getTranslateX() + (movingRight ? 1 : -1));
         }
     }
 
@@ -369,7 +367,6 @@ public class Main extends Application {
                     dialogEvent1 = false;
                     Current_Level +=0;
                     initContent();
-                    //running1 = true;
                     }
             }
         };
