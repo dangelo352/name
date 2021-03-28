@@ -31,6 +31,9 @@ public class Tileset {
     new Tile("CastleFloat", '-', "tutorial14/texture/castle/CastleFloat.PNG"),
     new Tile("CastleCornerL", '=', "tutorial14/texture/castle/LeftCorner.PNG"),
     new Tile("CastleCornerR", '+', "tutorial14/texture/castle/RightCorner.PNG"),
+    new Tile("TripleLeftCastle", 'd', "tutorial14/texture/castle/TripleLeftCastle.PNG"),
+    new Tile("TripleMidCastle", 'e', "tutorial14/texture/castle/TripleMidCastle.PNG"),
+    new Tile("TripleRightCastle", 'f', "tutorial14/texture/castle/TripleRightCastle.PNG"),
     new Tile("WoodDirt", 'E', "tutorial14/texture/shop/WoodDirt.PNG"),
     new Tile("WoodTile", 'F', "tutorial14/texture/shop/WoodTile.PNG"),
     new Tile("Hill4Sides", 'G', "tutorial14/texture/hills/Hill4Sides.GIF"),
@@ -42,6 +45,9 @@ public class Tileset {
     new Tile("HillLeftGrass", 'O', "tutorial14/texture/hills/HillLeftGrass.GIF"),
     new Tile("HillRightCorner", 'T', "tutorial14/texture/hills/HillRightCorner.GIF"),
     new Tile("HillRightGrass", 'U', "tutorial14/texture/hills/HillRightGrass.GIF"),
+    new Tile("LeftTripleHill", ':', "tutorial14/texture/hills/LeftTripleHill.GIF"),
+    new Tile("RightTripleHill", ',', "tutorial14/texture/hills/RightTripleHill.GIF"),
+    new Tile("TripleMidHill", '/', "tutorial14/texture/hills/TripleMidHill.GIF"),
     new Tile("CaveCeiling", '5', "tutorial14/texture/cave/CaveCeiling.PNG"),
     new Tile("CaveFloat", '6', "tutorial14/texture/cave/CaveFloat.PNG"),
     new Tile("CaveTile", 'V', "tutorial14/texture/cave/CaveTile.PNG"),
@@ -49,6 +55,9 @@ public class Tileset {
     new Tile("LeftCorner", '8', "tutorial14/texture/cave/LeftCorner.PNG"),
     new Tile("RightCave", '9', "tutorial14/texture/cave/RightCave.PNG"),
     new Tile("RightCorner", '!', "tutorial14/texture/cave/RightCorner.PNG"),
+    new Tile("TripleLeftCave", 'a', "tutorial14/texture/cave/TripleLeftCave.PNG"),
+    new Tile("TripleMidCave", 'b', "tutorial14/texture/cave/TripleMidCave.PNG"),
+    new Tile("TripleRightCave", 'c', "tutorial14/texture/cave/TripleRightCave.PNG"),
     new Tile("LeftSnow", '@', "tutorial14/texture/mountain/LeftSnow.PNG"),
     new Tile("RightSnow", '#', "tutorial14/texture/mountain/RightSnow.PNG"),
     new Tile("SnowDirt", '$', "tutorial14/texture/mountain/SnowDirt.PNG"),
@@ -56,7 +65,10 @@ public class Tileset {
     new Tile("SnowLeftCorner", '^', "tutorial14/texture/mountain/SnowLeftCorner.PNG"),
     new Tile("SnowRightCorner", '&', "tutorial14/texture/mountain/SnowRightCorner.PNG"),
     new Tile("SnowTile", '*', "tutorial14/texture/mountain/SnowTile.PNG"),
-    new Tile("SnowTop", '(', "tutorial14/texture/mountain/SnowTop.PNG")
+    new Tile("SnowTop", '(', "tutorial14/texture/mountain/SnowTop.PNG"),
+    new Tile("TripleLeftMnt", '<', "tutorial14/texture/mountain/TripleLeftMnt.PNG"),
+    new Tile("TripleMidMnt", '>', "tutorial14/texture/mountain/TripleMidMnt.PNG"),
+    new Tile("TripleRightMnt", '?', "tutorial14/texture/mountain/TripleRightMnt.PNG")
     
               
     };
