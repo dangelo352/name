@@ -42,19 +42,18 @@ public class LevelData {
        {
          //level 4
        
-         "W;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
-         "W333333333333333333333333333333333333333333333333333333333333",
-         "W                                                            ",
-         "W                                                            ",
+         ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+         "3333333333333333333333333333333333333333333333333333333333333",
+         "                                                             ",
+         "P                                                            ",
          "W                                 XX                         ",
-         "W  SXX                       XX        XX                   2",   
+         "W  SXP                       XX        XX                   2",   
          "W  1              P  SXXXXP                SXXP          SXXX",
-         "W  1MMMMMMMMMMMMMMW  1YYYYW                1YYYP        S    ",
-         "W  1YYYYYYYYYYYYYYW  1YYYYW                1YYYYP      S     ",
-         "W                    1YYYYW                1YYYYYP    S      ",
-         "W                    1YYYYWMMMMMMMMMMMMMMMM1YYYYYYYXXXX       ",
-         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY ",
-
+         "W  1MMMMMMMMMMMMMMW  1YYYYW                1YYYP        SYYYY",
+         "W  1YYYYYYYYYYYYYYW  1YYYYW                1YYYYP      SYYYYY",
+         "W                    1YYYYW                1YYYYYP    SYYYYYY",
+         "W                    1YYYYWMMMMMMMMMMMMMMMM1YYYYYYXXXXYYYYYYY",
+         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
          "                     "
         },
         {
