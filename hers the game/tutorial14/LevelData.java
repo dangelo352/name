@@ -90,7 +90,7 @@ public class LevelData {
          "                     "
         },
         {
-         //level 3 Forest C:
+         //level 3 Castle: B
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
          "                              C         CCCCCCCCCCCCCCCC   ",
          "                              C         C              C  ",
@@ -124,7 +124,7 @@ public class LevelData {
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 5 (Hills Level: A)
+        //level 5 Forest: C
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
          "                          Y     Y ",
          "                          Y     Y ",
@@ -142,7 +142,7 @@ public class LevelData {
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 6 (Hills Level: A)
+        //level 6 Castle: A
          "C))))))))))))))))))))))))))))))))))))))))))))))))))))",
          "D                                                    ",
          "D                                                    ",
@@ -177,7 +177,7 @@ public class LevelData {
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 8 Mountains: B
+        //level 8 Caves: A
         "555555555555555555555555555555555555555",
          "      55555555555  9               F7 ",
          "    FF           F 9                7 ",
@@ -192,7 +192,7 @@ public class LevelData {
          "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
         },
         {
-         //level 9 Mountains: C
+         //level 9 Caves: B
          "555555555555555555555555555555555555555555555555  ",
          "    9                               7        7      ",
          "    9                               7M       7     ",
