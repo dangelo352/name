@@ -70,6 +70,8 @@ public class Tileset {
     };
     public static Tile EnemyTile[] = 
     {
-     new Tile("Spikes" ,'M',"tutorial14/texture/MiddleSpikes.png")
+     new Tile("Spikes" ,'M',"tutorial14/texture/MiddleSpikes.png"),
+     new Tile("SpikesL", '[', "tutorial14/texture/LeftSpikes.PNG"),
+     new Tile("SpikesR", ']', "tutorial14/texture/RightSpikes.PNG")
     };
 }
