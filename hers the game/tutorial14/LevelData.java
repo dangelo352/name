@@ -46,13 +46,13 @@ public class LevelData {
          "                                                             ",
          "                                                             ",
          "                                                             ",
-         "X                                 YY                         ",
+         "X      oo                         YY                         ",
          "X  XXX                       YY        YY                   2",   
          "X  Y              Y  YYYYYY                YYYY          YYYY",
          "X  YMMMMMMMMMMMMMMY  Y    Y                Y   Y        Y    ",
          "X  YYYYYYYYYYYYYYYY  Y    Y                Y    Y      Y     ",
          "X                    Y    Y                Y     Y    Y      ",
-         "X                    Y    YMMMMMMMMMMMMMMMMY      YYYY       ",
+         "X     o   o    o     Y    YMMMMMMMMMMMMMMMMY      YYYY       ",
          "XXXXXXXXXXXXXXXXXXXXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY ",
 
          "                     "

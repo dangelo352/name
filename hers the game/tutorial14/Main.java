@@ -284,7 +284,6 @@ public class Main extends Application {
                   }catch(FileNotFoundException e){}
                   enemys.remove(enemy);
 
-                 
               }
            }
         }
