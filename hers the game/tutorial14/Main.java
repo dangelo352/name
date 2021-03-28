@@ -36,7 +36,7 @@ public class Main extends Application {
 
     private ArrayList<Node> platforms = new ArrayList<Node>();
     private ArrayList<Node> coins = new ArrayList<Node>();
-    private ArrayList<Node> enemys = new ArrayList<Node>();
+    private ArrayList<Rectangle> enemys = new ArrayList<Rectangle>();
     private ArrayList<Rectangle> daggas = new ArrayList<Rectangle>();
     private ArrayList<Integer> daggas_facing = new ArrayList<Integer>();
     
@@ -54,7 +54,7 @@ public class Main extends Application {
     private int levelWidth;
 
     private boolean dialogEvent = false, running = true;
-    private boolean dialogEvent1 = false; 
+ 
     
     public int Current_Level = 0;
     
@@ -79,6 +79,8 @@ public class Main extends Application {
 
       
     public Boolean shoot_toggle = false;  
+    
+    public Boolean keep_player = false;
       
     private void initContent() {
       gameRoot.getChildren().clear();
@@ -118,7 +120,7 @@ public class Main extends Application {
                 for(int k=0; k<Tileset.EnemyTile.length; k++) {
                   if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
                   
-                  Node enemy = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
+                  Rectangle enemy = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
                   enemys.add(enemy); 
                   
                   }
@@ -135,7 +137,7 @@ public class Main extends Application {
                 gameRoot.setLayoutX(-(offset - 640));
             }
         });
-
+        
         appRoot.getChildren().addAll( uiRoot , gameRoot);
         
         
@@ -268,13 +270,27 @@ public class Main extends Application {
         }
         for (Node enemy : enemys) {
             if (player.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
-                enemy.getProperties().put("alive", false);
-                dialogEvent1 = true;
-                
+                enemy.getProperties().put("alive", false);                
             }
         }
+        
+        for (Rectangle enemy : enemys) {
+           for (Rectangle dagga : daggas) {
+              if (dagga.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
+                
+                  try{//asdf
+                  Image image = new Image(new FileInputStream("tutorial14/texture/null.png"));
+                  enemy.setFill(new ImagePattern(image));  
+                  }catch(FileNotFoundException e){}
+                  enemys.remove(enemy);
 
-        for (Iterator<Node> it = enemys.iterator(); it.hasNext(); ) {
+                 
+              }
+           }
+        }
+
+        
+        for (Iterator<Rectangle> it = enemys.iterator(); it.hasNext(); ) {
             Node enemy = it.next();
             if (!(Boolean)enemy.getProperties().get("alive")) {
                 it.remove();
