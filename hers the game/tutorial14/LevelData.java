@@ -12,7 +12,8 @@ public class LevelData {
       {0,320},  //level 7 start etc.
       {0,320}, //8
       {0,320}, //9
-      {0,320} //10
+      {0,320}, //10
+      {100,320} //11
     };
     
     public static String background_img[] ={
@@ -195,6 +196,21 @@ public class LevelData {
          "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY               ",
  
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
+        },
+        {
+        //level 11
+        "CCCCCCCCCCCCCCCCCCCCFFFFFFFFFFFFFFFFCC",
+         "      FFFFFFFFFFF  F               FF ",
+         "    FF           F F                F ",
+         "    F             FF  FFF           F ",
+         "    F             FF    FFM     M   F ",
+         "    F  FFFF  FF   FF    FFFFFFFFFF  F ",
+         "    F  F  F  FF   FFFF  FF          F ",
+         "FFFF   F  F  FF         F           F ",
+         "F     F   F  FF         F  FFFFFFFFFF ",
+         "F     F   F  FF      FFFF           F ",
+         "F    F    FMMFF    MMFFFF          2F ",
+         "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
         }
 
 
