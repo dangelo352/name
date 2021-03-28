@@ -73,6 +73,11 @@ public class Main extends Application {
     public Boolean Is_idle = true;
     public int is_running_direction = 0;//no = 0 left = 1 right = 2 
       
+    public StackPane stackPane = new StackPane();
+      
+    public Rectangle Disp_Background = new Rectangle();
+
+      
     public Boolean shoot_toggle = false;  
       
     private void initContent() {
@@ -132,6 +137,20 @@ public class Main extends Application {
         });
 
         appRoot.getChildren().addAll( uiRoot , gameRoot);
+        
+        
+        stackPane.getChildren().clear();
+        Disp_Background.setHeight(720);
+        Disp_Background.setWidth(1280);
+        String backgroundTemp = LevelData.background_img[Current_Level];
+        try{
+        Image image = new Image(new FileInputStream(backgroundTemp));
+        Disp_Background.setFill(new ImagePattern(image));
+        }catch(FileNotFoundException e){}
+        stackPane.getChildren().add(Disp_Background);
+        stackPane.getChildren().add(appRoot);
+
+        
     }
     private void shoot() {
            
@@ -153,6 +172,8 @@ public class Main extends Application {
            }
            
            daggas_facing.add(dagger_direction);
+           
+           
     } 
     
     private void update() {
@@ -352,19 +373,15 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         initContent();
         
-        StackPane stackPane = new StackPane();
+        stackPane.getChildren().clear();
+        Disp_Background.setHeight(720);
+        Disp_Background.setWidth(1280);
         String backgroundTemp = LevelData.background_img[Current_Level];
         try{
         Image image = new Image(new FileInputStream(backgroundTemp));
-        
-        Rectangle shape = new Rectangle();
-        shape.setHeight(720);
-        shape.setWidth(1280);
-        shape.setFill(new ImagePattern(image));
-        
-        stackPane.getChildren().add(shape);
+        Disp_Background.setFill(new ImagePattern(image));
         }catch(FileNotFoundException e){}
-        
+        stackPane.getChildren().add(Disp_Background);
         stackPane.getChildren().add(appRoot);
         
         Scene scene = new Scene(stackPane);
