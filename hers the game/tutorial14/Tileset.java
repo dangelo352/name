@@ -23,6 +23,7 @@ public class Tileset {
     new Tile("RTripleGrass", '{', "tutorial14/texture/forest/RTripleGrass.GIF"),
     new Tile("LTripleGrass", '}', "tutorial14/texture/forest/LTripleGrass.GIF"),
     new Tile("MidRipleGrass", '~', "tutorial14/texture/forest/MidRipleGrass.GIF"),
+    new Tile("ForestInvTile", 'i', "tutorial14/texture/forest/LeftInvTile.GIF"),
     new Tile("CastleDirt", 'A', "tutorial14/texture/castle/CastleDirt.PNG"),
     new Tile("CastleFloor", 'C', "tutorial14/texture/castle/CastleFloor.PNG"),
     new Tile("CastleFloorL", 'B', "tutorial14/texture/castle/CastleFloorL.PNG"),
@@ -68,7 +69,9 @@ public class Tileset {
     new Tile("SnowTop", '(', "tutorial14/texture/mountain/SnowTop.PNG"),
     new Tile("TripleLeftMnt", '<', "tutorial14/texture/mountain/TripleLeftMnt.PNG"),
     new Tile("TripleMidMnt", '>', "tutorial14/texture/mountain/TripleMidMnt.PNG"),
-    new Tile("TripleRightMnt", '?', "tutorial14/texture/mountain/TripleRightMnt.PNG")
+    new Tile("TripleRightMnt", '?', "tutorial14/texture/mountain/TripleRightMnt.PNG"),
+    new Tile("InvCornerMntL", 'g', "tutorial14/texture/mountain/InvCornerMntL.PNG"),
+    new Tile("InvCornerMntR", 'h', "tutorial14/texture/mountain/InvCornerMntR.PNG")
     
               
     };
@@ -86,7 +89,7 @@ public class Tileset {
     
     public static Tile EnemyTile[] = 
     {
-    new Tile("Spikes" ,'o',"tutorial14/texture/MiddleSpikes.png")
+    new Tile("LeftGWalk" ,'o',"tutorial14/texture/enemies/LeftGWalk.GIF")
 
     };
     

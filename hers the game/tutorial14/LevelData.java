@@ -3,6 +3,7 @@ package tutorial14;
 public class LevelData {
     
     public static int player_start_pos[][] ={
+      {0, 320},
       {150,220},//4
       {0,320}, //5
       {0,320},  //level 7 start etc.
@@ -39,8 +40,26 @@ public class LevelData {
     
     public static final String[][] level_dat = new String[][] 
     {
+      {
+        //level 1
+      
+        ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+        "33333333333333333333333333333",
+        "                             ",
+        "                            2",
+        "                        }~~~{",
+        "                             ",
+        "              4      4       ",   
+        "           4                 ",
+        "        4         4          ",
+        "     S                       ",
+        "    SY                       ",
+        "   SYY                       ",
+        "XXYYYYXXXXXXXXXXXXXXXXXXXXXXX",
+        "                     "
+       },
        {
-         //level 4
+         //level 1
        
          ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
          "3333333333333333333333333333333333333333333333333333333333333",
@@ -58,7 +77,7 @@ public class LevelData {
          "                     "
         },
         {
-         //level 5
+         //level 2
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
          "                              C         CCCCCCCCCCCCCCCC   ",
          "                              C         C              C  ",
@@ -69,16 +88,31 @@ public class LevelData {
          "          CCCCCCCCCCCCCC      C            C               ",
          "         C                    C    CCCCCCCC               ",
          "        C                     CMMCC                     ",
-         "       C                                              ",
+         "   2    C                                              ",
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC ",
 
          "     "
         },
         {
-        //level 7 (Hills Level: A)
+        //level 3
+         "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
+         "                              C         CCCCCCCCCCCCCCCC   ",
+         "                              C         C              C  ",
+         "               MCM     CCC        CCCC                2C   ",
+         "                M     CC C                 CCCCCCCCCCCCC   ",
+         "                       C CCCCCC            C              ",   
+         "                       C      C            C              ",
+         "          CCCCCCCCCCCCCC      C            C               ",
+         "         C                    C    CCCCCCCC               ",
+         "        C                     CMMCC                     ",
+         "   2     C                                              ",
+         "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC ",      
+        },
+        {
+        //level 4 (Hills Level: A)
          "                                                     Y     Y",
          "                     HHH                                   Y",
-         "                     SXP                         HHHHH     Y",
+         "     2                SXP                         HHHHH     Y",
          "   HHHHHHHHHHHH        Y                         SXXXP     Y",
          "   SXXXXXXXXXXPX     HHYHHMHHHHH   HHHHHH   HHHHHYYYYY     Y",
          "   YYYYYYYYYYY       SXYXXXXXXXP   SXXXXP   SXXXXYYYYY    2Y",
@@ -92,7 +126,7 @@ public class LevelData {
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 8 (Hills Level: A)
+        //level 5 (Hills Level: A)
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
          "                          Y     Y ",
          "                          Y     Y ",
@@ -100,7 +134,7 @@ public class LevelData {
          "       Y    Y    Y    YY  Y    2Y ",
          "                      YY     YYYY  ",   
          "     Y                  Y       Y  ",
-         "                         YYY    Y  ",
+         "   2                      YYY    Y  ",
          "YYYYM  YYYM  YYYM  YYY    YYY   Y   ",
          "   YM  Y YM  Y YM  Y YY         Y  ",
          "   YM  Y YM  Y YM  Y YY         Y ",
@@ -110,7 +144,7 @@ public class LevelData {
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 9 (Hills Level: A)
+        //level 6 (Hills Level: A)
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
          "                                                    ",
          "                                                    ",
@@ -129,8 +163,8 @@ public class LevelData {
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 10 (Hills Level: A)
-  		"                YYYYYYYYY                    ",
+        //level 7 (Hills Level: A)
+  		"                 YYYYYYYYY                    ",
          "                       Y        YYYYYYYYY    ",
          "                       Y        Y       Y    ",
          "                      MYYYYYYYYYY      2Y      ",
@@ -140,13 +174,13 @@ public class LevelData {
          "               XYYYYM  Y  Y         Y      ",   
          "               YYYYY      YYYYYYYYYYYYY     ",   
          "              YYYYYY      Y                 ",   
-         "    X        YYYYYY M    Y                 ",
+         "    X         YYYYYY M    Y                 ",
          "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY               ",
  
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 11
+        //level 8
         "CCCCCCCCCCCCCCCCCCCCFFFFFFFFFFFFFFFFCC",
          "      FFFFFFFFFFF  F               FF ",
          "    FF           F F                F ",
@@ -161,7 +195,7 @@ public class LevelData {
          "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
         },
         {
-        //level 12
+        //level 9
          "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV  ",
          "    V                               V        V      ",
          "    V                               VM   2   V     ",
@@ -176,21 +210,20 @@ public class LevelData {
          "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
         },
         {
-                //level 12
+                //level 10
          "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV  ",
          "    V                               V        V      ",
          "    V                               VM       V     ",
-         "    V  VVVVVVVV  VV   VVVVVVVVVVVV  V   VVV  V     ",
+         "    V  VVVVVVVV  VVV  VVVVVVVVVVVV  V   VVV  V     ",
          "    V      V                     V  V     V  V       ",
          "    V      V                     V  VVV   V  V     ",
-         "    VVVV            M            V        V  V  ",
+         "    VVVV                         V        V  V  ",
          "VVVV           VVVVVVVVVVVMVVV   V        V  V         ",
          "V          VVVVV    M   M    M  MVVVVVVVVVV  V    ",
          "V    VV                                      V        ",
          "V    VV                                2     V     ",
          "VVVVVVVVVVVVVVVVVVMVVVVMVVVMVVVVVVVVVVVVVVVVVVVVVV",
         }
-
    };
    
 }
