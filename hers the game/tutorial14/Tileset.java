@@ -51,7 +51,7 @@ public class Tileset {
     new Tile("RightTripleHill", ',', "tutorial14/texture/hills/RightTripleHill.GIF"),
     new Tile("TripleMidHill", '/', "tutorial14/texture/hills/TripleMidHill.GIF"),
     new Tile("RightInverseHill", 'n', "tutorial14/texture/hills/RightInverseHill.GIF"),
-    new Tile("LeftInverseHill", 'o', "tutorial14/texture/hills/LeftInverseHill.GIF"),
+    new Tile("LeftInverseHill", 'r', "tutorial14/texture/hills/LeftInverseHill.GIF"),
     new Tile("CaveCeiling", '5', "tutorial14/texture/cave/CaveCeiling.PNG"),
     new Tile("CaveFloat", '6', "tutorial14/texture/cave/CaveFloat.PNG"),
     new Tile("CaveTile", 'V', "tutorial14/texture/cave/CaveTile.PNG"),

@@ -3,7 +3,8 @@ package tutorial14;
 public class LevelData {
     
     public static int player_start_pos[][] ={
-      {0, 320},
+      {0,320},
+      {0,320},
       {150,220},//4
       {0,320}, //5
       {0,320},  //level 7 start etc.
@@ -14,38 +15,50 @@ public class LevelData {
     };
     
     public static String background_img[] ={
+      "tutorial14/texture/TitleSequence.PNG",
       "tutorial14/texture/forest/lvl1_background.PNG", //level 1 background img file path goes here (should look like: "tutorial14/texture/filename.extention") 
-      "tutorial14/texture/forest/lvl1_background.PNG",
-      "tutorial14/texture/forest/lvl1_background.PNG",
-      "tutorial14/texture/forest/lvl1_background.PNG",  
-      "tutorial14/texture/hills/HillsBackground.PNG",
-      "tutorial14/texture/hills/HillsBackground.PNG",
-      "tutorial14/texture/hills/HillsBackground.PNG",
-      "tutorial14/texture/hills/HillsBackground.PNG",
-      "tutorial14/texture/mountin/MountainBackground.PNG",
-      "tutorial14/texture/mountin/MountainBackground.PNG",
-      "tutorial14/texture/mountin/MountainBackground.PNG",
-      "tutorial14/texture/mountin/MountainBackground.PNG",
-      "tutorial14/texture/cave/CaveBackground.PNG",
-      "tutorial14/texture/cave/CaveBackground.PNG",
-      "tutorial14/texture/cave/CaveBackground.PNG",
-      "tutorial14/texture/cave/CaveBackground.PNG",
-      "tutorial14/texture/castle/CastleWalls.PNG",
-      "tutorial14/texture/castle/CastleWalls.PNG",
-      "tutorial14/texture/castle/CastleWalls.PNG",
-      "tutorial14/texture/castle/CastleWalls.PNG",
+      "tutorial14/texture/forest/lvl1_background.PNG", //2
+      "tutorial14/texture/forest/lvl1_background.PNG", //3
+      "tutorial14/texture/hills/HillsBackground.PNG", //4
+      "tutorial14/texture/hills/HillsBackground.PNG", //5
+      "tutorial14/texture/hills/HillsBackground.PNG", //6
+      "tutorial14/texture/mountin/MountainBackground.PNG", //7
+      "tutorial14/texture/mountin/MountainBackground.PNG", //8
+      "tutorial14/texture/mountin/MountainBackground.PNG", //9
+      "tutorial14/texture/cave/CaveBackground.PNG", //10
+      "tutorial14/texture/cave/CaveBackground.PNG", //11
+      "tutorial14/texture/cave/CaveBackground.PNG", //12
+      "tutorial14/texture/castle/CastleWalls.PNG", //13
+      "tutorial14/texture/castle/CastleWalls.PNG", //14
+      "tutorial14/texture/castle/CastleWalls.PNG", //15
     };
     
     
     
     public static final String[][] level_dat = new String[][] 
     {
+    {
+        //level 0
+      
+       "                     ",
+       "                     ",
+       "                     ",
+       "                     ",
+       "                     ",
+       "                     ",
+       "                     ",   
+       "                     ",
+       "                     ",
+       "                     ",
+       "                     ",
+       "                    2",
+       "XXXXXXXXXXXXXXXXXXXXX"
+      },
       {
         //level 1
       
         ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
         "33333333333333333333333333333",
-        "                             ",
         "                            2",
         "                        }~~~{",
         "                             ",
@@ -55,11 +68,11 @@ public class LevelData {
         "     S                       ",
         "    Si                       ",
         "   SiY   o   o   o   o   o   ",
-        "XXYYYYXXXXXXXXXXXXXXXXXXXXXXX",
+        "XXXiYYXXXXXXXXXXXXXXXXXXXXXXX",
         "                     "
        },
        {
-         //level 1
+         //level 2
        
          ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
          "3333333333333333333333333333333333333333333333333333333333333",
@@ -77,7 +90,7 @@ public class LevelData {
          "                     "
         },
         {
-         //level 2
+         //level 3
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
          "                              C         CCCCCCCCCCCCCCCC   ",
          "                              C         C              C  ",
@@ -92,21 +105,6 @@ public class LevelData {
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC ",
 
          "     "
-        },
-        {
-        //level 3
-         "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-         "                              C         CCCCCCCCCCCCCCCC   ",
-         "                              C         C              C  ",
-         "               MCM     CCC        CCCC                2C   ",
-         "                M     CC C                 CCCCCCCCCCCCC   ",
-         "                       C CCCCCC            C              ",   
-         "                       C      C            C              ",
-         "          CCCCCCCCCCCCCC      C            C               ",
-         "         C                    C    CCCCCCCC               ",
-         "        C                     CMMCC                     ",
-         "   2     C                                              ",
-         "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC ",      
         },
         {
         //level 4 (Hills Level: A)
@@ -164,7 +162,7 @@ public class LevelData {
         },
         {
         //level 7 (Hills Level: A)
-  		"                 YYYYYYYYY                    ",
+  		   "                 YYYYYYYYY                    ",
          "                       Y        YYYYYYYYY    ",
          "                       Y        Y       Y    ",
          "                      MYYYYYYYYYY      2Y      ",
@@ -209,21 +207,6 @@ public class LevelData {
          "V    VV             M                        V     ",
          "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
         },
-        {
-                //level 10
-         "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV  ",
-         "    V                               V        V      ",
-         "    V                               VM       V     ",
-         "    V  VVVVVVVV  VVV  VVVVVVVVVVVV  V   VVV  V     ",
-         "    V      V                     V  V     V  V       ",
-         "    V      V                     V  VVV   V  V     ",
-         "    VVVV                         V        V  V  ",
-         "VVVV           VVVVVVVVVVVMVVV   V        V  V         ",
-         "V          VVVVV    M   M    M  MVVVVVVVVVV  V    ",
-         "V    VV                                      V        ",
-         "V    VV                                2     V     ",
-         "VVVVVVVVVVVVVVVVVVMVVVVMVVVMVVVVVVVVVVVVVVVVVVVVVV",
-        }
    };
    
 }
