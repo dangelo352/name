@@ -21,7 +21,15 @@ public class LevelData {
       "tutorial14/texture/forest/lvl1_background.PNG",
       "tutorial14/texture/forest/lvl1_background.PNG",
       "tutorial14/texture/cave/CaveBackground.PNG",  //level 2 background etc.
-      ""
+      "tutorial14/texture/forest/lvl1_background.PNG",
+      "tutorial14/texture/forest/lvl1_background.PNG",
+      "tutorial14/texture/cave/CaveBackground.PNG",
+      "tutorial14/texture/forest/lvl1_background.PNG",
+      "tutorial14/texture/forest/lvl1_background.PNG",
+      "tutorial14/texture/cave/CaveBackground.PNG",
+      "tutorial14/texture/forest/lvl1_background.PNG",
+      "tutorial14/texture/forest/lvl1_background.PNG",
+      "tutorial14/texture/cave/CaveBackground.PNG"
     };
     
     
@@ -39,8 +47,8 @@ public class LevelData {
          "                     ",
          "                     ",
          "                     ",
-         "     HHH         o   ",
-         "HHHHHXXXHHHH  HHH HH2",
+         "     HHH             ",
+         "HHHHHXXXHHHH  HHHoHH2",
          "XXXXXXXXXXXXXXXXXXXXX",
          "                     "
         },
