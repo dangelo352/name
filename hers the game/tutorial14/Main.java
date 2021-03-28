@@ -54,7 +54,7 @@ public class Main extends Application {
 
     private int levelWidth;
 
-    private boolean dialogEvent = false, running = true;
+    private boolean running = true;
  
     
     public int Current_Level = 0;
@@ -84,8 +84,8 @@ public class Main extends Application {
     public Boolean keep_player = false;
       
     private void initContent() {
-      gameRoot.getChildren().clear();
       gameRoot.setLayoutX(0);
+      gameRoot.getChildren().clear();
       appRoot.getChildren().clear();
       platforms.clear();
       coins.clear();
@@ -253,31 +253,21 @@ public class Main extends Application {
          
          int shmove;
          if (daggas_facing.get(i) == 2){
-         shmove = +8;
-         }else{shmove = -8;}
+         moveBoxX(8,daggas.get(i));
+
+         }else{moveBoxX(-8,daggas.get(i));}
          
-         moveBoxX(shmove,daggas.get(i));
-         
+                  
          }
         
         
         for (Node coin : coins) {
             if (player.getBoundsInParent().intersects(coin.getBoundsInParent())) {
                 coin.getProperties().put("alive", false);
-                dialogEvent = true;
-                running = false;
+                 Current_Level +=1;
+                 initContent();
+               
             }
-        }
-        
-        
-        for (Iterator<Node> it = coins.iterator(); it.hasNext(); ) {
-            Node coin = it.next();
-            if (!(Boolean)coin.getProperties().get("alive")) {
-                it.remove();
-                
-                gameRoot.getChildren().remove(coin);
-            }
-            
         }
         for (Node spike : spikes) {
             if (player.getBoundsInParent().intersects(spike.getBoundsInParent())) {
@@ -309,19 +299,7 @@ public class Main extends Application {
               }
            }
         }
-
-        /*
-        for (Iterator<Rectangle> it = enemys.iterator(); it.hasNext(); ) {
-            Node enemy = it.next();
-            if (!(Boolean)enemy.getProperties().get("alive")) {
-                it.remove();
-                gameRoot.getChildren().remove(enemy);
-                Current_Level = 0;
-                initContent();
-                
-                }
-           }*/
-        }
+    }
     
     private void moveBoxX(int value, Rectangle moveable) {
         boolean movingRight = value > 0;
@@ -409,18 +387,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         initContent();
-        
-        stackPane.getChildren().clear();
-        Disp_Background.setHeight(720);
-        Disp_Background.setWidth(1280);
-        String backgroundTemp = LevelData.background_img[Current_Level];
-        try{
-        Image image = new Image(new FileInputStream(backgroundTemp));
-        Disp_Background.setFill(new ImagePattern(image));
-        }catch(FileNotFoundException e){}
-        stackPane.getChildren().add(Disp_Background);
-        stackPane.getChildren().add(appRoot);
-        
+
         Scene scene = new Scene(stackPane);
         scene.setOnKeyPressed(event -> keys.put(event.getCode(), true));
         scene.setOnKeyReleased(event -> keys.put(event.getCode(), false));
@@ -435,13 +402,7 @@ public class Main extends Application {
                     update();
                 }
 
-                if (dialogEvent) {
-                    dialogEvent = false;
-                    Current_Level +=1;
-                    initContent();
-                    running = true;
-                    }
-            }
+                           }
         
         };
 

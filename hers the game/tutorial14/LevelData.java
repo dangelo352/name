@@ -3,8 +3,8 @@ package tutorial14;
 public class LevelData {
     
     public static int player_start_pos[][] ={
-      {0,10},
-      {0,10},
+      {0,600},
+      {0,500},
       {150,220},//4
       {0,10}, //5
       {0,10},  //level 7 start etc.
@@ -64,8 +64,8 @@ public class LevelData {
         "                        }~~~{",
         "              H      H       ",
         "           H  4      4       ",   
-        "        H  4      H          ",
-        "    2 H  4         4          ",
+        "         H 4      H          ",
+        "    2H   4        4          ",
         "    HS                       ",
         "   HSi                       ",
         "HHHSiY   o   o   o   o   o   ",
@@ -79,7 +79,7 @@ public class LevelData {
          "3333333333333333333333333333333333333333333333333333333333333",
          "                                                             ",
          "                                                             ",
-         "     2                             HH                         ",
+         "     2                            HH                         ",
          "P  HHH  oo                   HH   }{   HH                    ",
          "W  SX{            H  HHHHHH  }{        }{  HHHH          HHH2",   
          "W  1              P  SXXXXP                SXXPH        HSXXX",
@@ -98,21 +98,20 @@ public class LevelData {
          "       H    H    H    HH  W     1 ",
          "       4    4    4    SP  W  HH21 ",
          "     H                QRH    }~~Y  ",   
-         "  2   4                  4HHH    1  ",
+         "  2  4                   4HHH   1  ",
          "HHHH   HHH   HHH   HHH   }XPH   1  ",
          "XXXPl  SXPl  SXPl  SXPH   QY{   1   ",
          "YYYWl  1YWl  1YWl  1YjP         1  ",
          "YYYWlHH1YWlHH1YWlHH1YYWHHHHHHHHH1 ",
          "YYYjXXXiYjXXXiYjXXXiYYjXXXXXXXXXX ",
-
-         "Y                                " 
+         "                                 " 
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
         //level 4 Hills: A
          "                                                     I     I",
          "                     KKK                                   I",
-         "   2                  LJT                         KKKKK     I",
+         "   2                  LJT                         KKKKK    I",
          "   KKKKKKKKKKKK        I                         LJJJT     I",
          "   LJJJJJJJJJJJT     KoIKKMKKKKK   KKKKKK   KKKKKIIIII     I",
          "   IIIIIIIIIII       LJIJJJJJJJT   LJJJJT   LJJJJIIIII     I",
