@@ -142,6 +142,23 @@ public class LevelData {
         "XXXXXXXXXXXXXXXXXXXXX"
         },
         {
+        //level 06 Hills: C
+      
+       "              K   kO    KK             ",
+       "              T   kOKK  LTK            ",
+       "              Ul  kO/,  OnTK           ",
+       "  KKKKK   KKKKUl  kO    OInTK          ",
+       "  LJJJT   LJJJUl  kOKK  OIInTK         ",
+       "  OIIIU   OIIIUl  kO/,  OIIInTK        ",
+       "KKOIIIU   OIIIUl  kO    OIIIInTK       ",   
+       "JJrIIIU       Ul  kOKK  OIIIIInTK      ",
+       "IIIIIIU       Ul  kO/,  OIIIIIInTK     ",
+       "IIIIIIU   O   Ul        OIIIIIIInTK    ",
+       "IIIIIIU o O[M]UlKKKKKKKKOIIIIIIIInTK2KK",
+       "IIIIIInJJJrIIInJJJJJJJJJrIIIIIIIIInJJJJ",
+       "XXXXXXXXXXXXXXXXXXXXX"
+      },
+        {
         //level 7 Mountains: A
         //level 7 (montin Level: A)
          "                <>>>>>>>>>$$$$$$$$$$$$$$$$$$$",
