@@ -278,7 +278,7 @@ public class Main extends Application {
            for (Rectangle dagga : daggas) {
               if (dagga.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
                 
-                  try{//asdf
+                  try{//asdf 
                   Image image = new Image(new FileInputStream("tutorial14/texture/null.png"));
                   enemy.setFill(new ImagePattern(image));  
                   }catch(FileNotFoundException e){}
