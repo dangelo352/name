@@ -69,7 +69,7 @@ public class Main extends Application {
     //player animation toggles
     public Boolean Is_idle = true;
     public int is_running_direction = 0;//no = 0 left = 1 right = 2 
-    
+      
     private void initContent() {
       gameRoot.getChildren().clear();
       gameRoot.setLayoutX(0);
@@ -78,7 +78,7 @@ public class Main extends Application {
       coins.clear();
       enemys.clear();
       
-        levelWidth = LevelData.level_dat[Current_Level][0].length() * stage_wide;
+      levelWidth = LevelData.level_dat[Current_Level][0].length() * stage_wide;
          
         for (int i = 0; i < LevelData.level_dat[Current_Level].length; i++) {
             String line = LevelData.level_dat[Current_Level][i];
@@ -131,18 +131,18 @@ public class Main extends Application {
         appRoot.getChildren().addAll( uiRoot , gameRoot);
     }
     private void shoot() {
-         
-              
-
-            if(!Is_idle){
+           
+           
+           if(!Is_idle){
            try{
            Image image = new Image(new FileInputStream("tutorial14/texture/player/red.png"));
            player.setFill( new ImagePattern(image));  
            }catch(FileNotFoundException e){} }
            
-                    s = createEntity(600,400, s_wide, s_tall, "tutorial14/texture/player/Assassin.GIF");
-
-   
+           
+           s = createEntity(600,400, s_wide, s_tall, "tutorial14/texture/player/Assassin.GIF");
+           
+           
     } 
     
     private void update() {
@@ -224,7 +224,6 @@ public class Main extends Application {
                 enemy.getProperties().put("alive", false);
                 dialogEvent1 = true;
                 
-
             }
         }
 
@@ -233,17 +232,13 @@ public class Main extends Application {
             if (!(Boolean)enemy.getProperties().get("alive")) {
                 it.remove();
                 gameRoot.getChildren().remove(enemy);
-                    Current_Level =0;
-                    initContent();
-                    
-               
+                Current_Level =0;
+                initContent();
+                
                 }
            }
-        
- 
     }
     
-
     private void movePlayerX(int value) {
         boolean movingRight = value > 0;
 
@@ -374,8 +369,7 @@ public class Main extends Application {
                     dialogEvent1 = false;
                     Current_Level +=0;
                     initContent();
-                    //running1 = true;
-                    }
+                }
             }
         };
 

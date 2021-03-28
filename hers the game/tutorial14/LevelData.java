@@ -1,6 +1,5 @@
 package tutorial14;
 
-
 public class LevelData {
     
     public static int player_start_pos[][] ={
