@@ -71,12 +71,18 @@ public class Tileset {
     {
     new Tile("levelend" ,'2',"tutorial14/texture/koin.gif")
     };
+    
     public static Tile EnemyTile[] = 
+    {
+    new Tile("Spikes" ,'o',"tutorial14/texture/MiddleSpikes.png")
+
+    };
+    
+    public static Tile Spikes[] = 
     {
      new Tile("Spikes" ,'M',"tutorial14/texture/MiddleSpikes.png"),
      new Tile("SpikesL", '[', "tutorial14/texture/LeftSpikes.PNG"),
-     new Tile("SpikesR", ']', "tutorial14/texture/RightSpikes.PNG"),
-     new Tile("Spikes" ,'o',"tutorial14/texture/MiddleSpikes.png")
-     
+     new Tile("SpikesR", ']', "tutorial14/texture/RightSpikes.PNG")
+          
     };
 }

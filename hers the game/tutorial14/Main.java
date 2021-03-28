@@ -37,6 +37,7 @@ public class Main extends Application {
     private ArrayList<Node> platforms = new ArrayList<Node>();
     private ArrayList<Node> coins = new ArrayList<Node>();
     private ArrayList<Rectangle> enemys = new ArrayList<Rectangle>();
+    private ArrayList<Rectangle> spikes = new ArrayList<Rectangle>();
     private ArrayList<Rectangle> daggas = new ArrayList<Rectangle>();
     private ArrayList<Integer> daggas_facing = new ArrayList<Integer>();
     
@@ -89,6 +90,8 @@ public class Main extends Application {
       platforms.clear();
       coins.clear();
       enemys.clear();
+      spikes.clear();
+      
       
       levelWidth = LevelData.level_dat[Current_Level][0].length() * stage_wide;
          
@@ -114,6 +117,15 @@ public class Main extends Application {
                 
                   Node coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.SpecialTile[k].path ); //litrlaly make platform with strong from tileset ckass
                   coins.add(coin);   
+                  }
+                }
+                
+                for(int k=0; k<Tileset.Spikes.length; k++) {
+                  if( line.charAt(j) == Tileset.Spikes[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
+                  
+                  Rectangle Spike = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
+                  spikes.add(Spike); 
+                  
                   }
                 }
                 
@@ -268,9 +280,9 @@ public class Main extends Application {
             }
             
         }
-        for (Node enemy : enemys) {
-            if (player.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
-                enemy.getProperties().put("alive", false);                
+        for (Node spike : spikes) {
+            if (player.getBoundsInParent().intersects(spike.getBoundsInParent())) {
+                spike.getProperties().put("alive", false);                
             }
         }
         
