@@ -71,6 +71,8 @@ public class Main extends Application {
     public Boolean Is_idle = true;
     public int is_running_direction = 0;//no = 0 left = 1 right = 2 
       
+    public Boolean shoot_toggle = false;  
+      
     private void initContent() {
       gameRoot.getChildren().clear();
       gameRoot.setLayoutX(0);
@@ -176,8 +178,10 @@ public class Main extends Application {
           
         }
         if (isPressed(KeyCode.SPACE)){
-        shoot();
-        }
+        
+           shoot();
+        
+        }else{shoot_toggle = false;}
 
         if (keyD&&!keyA&& player.getTranslateX() + player_wide <= levelWidth - 5) {
             moveBoxX(5,player);
@@ -197,7 +201,7 @@ public class Main extends Application {
         }
         
        
-        movePlayerY((int)playerVelocity.getY());
+        moveBoxY((int)playerVelocity.getY(),player);
 
         for (Node coin : coins) {
             if (player.getBoundsInParent().intersects(coin.getBoundsInParent())) {
@@ -259,28 +263,28 @@ public class Main extends Application {
         }
     }
 
-    private void movePlayerY(int value) {
+    private void moveBoxY(int value, Rectangle moveable) {
         boolean movingDown = value > 0;
         try {
             Thread.sleep(5);
         for (int i = 0; i < Math.abs(value); i++) {
             for (Node platform : platforms) {
-                if (player.getBoundsInParent().intersects(platform.getBoundsInParent())) {
+                if (moveable.getBoundsInParent().intersects(platform.getBoundsInParent())) {
                     if (movingDown) {
-                        if (player.getTranslateY() + player_tall == platform.getTranslateY()) {
-                            player.setTranslateY(player.getTranslateY() - 1);
+                        if (moveable.getTranslateY() + player_tall == platform.getTranslateY()) {
+                            moveable.setTranslateY(player.getTranslateY() - 1);
                             canJump = true;
                             return;
                         }
                     }
                     else {
-                        if (player.getTranslateY() == platform.getTranslateY() + stage_tall) {
+                        if (moveable.getTranslateY() == platform.getTranslateY() + stage_tall) {
                             return;
                         }
                     }
                 }
             }
-            player.setTranslateY(player.getTranslateY() + (movingDown ? 1 : -1));
+            moveable.setTranslateY(player.getTranslateY() + (movingDown ? 1 : -1));
         }
     }
         catch(Exception e){
