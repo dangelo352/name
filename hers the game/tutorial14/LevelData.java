@@ -8,10 +8,11 @@ public class LevelData {
       {150,220},//4
       {0,320}, //5
       {0,320},  //level 7 start etc.
-      {0,320}, //8
-      {0,320}, //9
+      {100,320}, //8
+      {100,320}, //9
       {0,320}, //10
-      {100,320} //11
+      {100,500}, //11
+      {100,500}
     };
     
     public static String background_img[] ={
@@ -66,7 +67,7 @@ public class LevelData {
         "        H  4      H          ",
         "     H  4         4          ",
         "    HS                       ",
-        "   HSi                       ",
+        " 2  HSi                       ",
         "HHHSiY   o   o   o   o   o   ",
         "XXXiYYXXXXXXXXXXXXXXXXXXXXXXX",
         "                     "
@@ -78,7 +79,7 @@ public class LevelData {
          "3333333333333333333333333333333333333333333333333333333333333",
          "                                                             ",
          "                                                             ",
-         "                                  HH                         ",
+         "    2                              HH                         ",
          "P  HHH  oo                   HH   }{   HH                    ",
          "W  SX{            H  HHHHHH  }{        }{  HHHH          HHH2",   
          "W  1              P  SXXXXP                SXXPH        HSXXX",
@@ -100,7 +101,7 @@ public class LevelData {
          "                       BAAAAAAD            BAAAAAAAAAAAAAAA",
          "          =CCCCCCCCCCCCCAAAAAAD            BAAAAAAAAAAAAAAA",
          "         =AAAAAAAAAAAAAAAAAAAAD    =CCCCCCCAAAAAAAAAAAAAAAA",
-         "        =AAAAAAAAAAAAAAAAAAAAACMMCCAAAAAAAAAAAAAAAAAAAAAAAA",
+         "  2      =AAAAAAAAAAAAAAAAAAAAACMMCCAAAAAAAAAAAAAAAAAAAAAAAA",
          "       =AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
          "CCCCCCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ",
 
@@ -113,7 +114,7 @@ public class LevelData {
          "                     LJT                         KKKKK     I",
          "   KKKKKKKKKKKK        I                         LJJJT     I",
          "   LJJJJJJJJJJJT     KoIKKMKKKKK   KKKKKK   KKKKKIIIII     I",
-         "   IIIIIIIIIII       LJIJJJJJJJT   LJJJJT   LJJJJIIIII     I",
+         "  2 IIIIIIIIIII       LJIJJJJJJJT   LJJJJT   LJJJJIIIII     I",
          "KKKIIIIIIIIIII         IIIIIIIII   IIIIII   IIIIIIIIIIKKKK2I",
          "JJJIIIIIIIIIII       KKIIIIIIIII   IIIIII   IIIIIIIIIIJJJJJI",
          "IIIIIIIIIIIIII       LJIIIIIIIII   IIIIII   IIIIIIIIIIIIIIII",
@@ -131,7 +132,7 @@ public class LevelData {
          "       H    H    H    HH  W     1 ",
          "       4    4    4    SP  W  HH21 ",
          "     H                QRH    }~~Y  ",   
-         "     4                  4HHH    1  ",
+         "  2   4                  4HHH    1  ",
          "HHHH   HHH   HHH   HHH   }XPH   1  ",
          "XXXPl  SXPl  SXPl  SXPH   QY{   1   ",
          "YYYWl  1YWl  1YWl  1YjP         1  ",
@@ -151,7 +152,7 @@ public class LevelData {
          "D                                          2           ",   
          "D               -   -                    deeef         ",
          "D          -                                          ",
-         "D      -                              -                ",
+         "D 2     -                              -                ",
          "Aeef                      -  -   - -                  ",
          "D                                                     ",
          "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM ",
@@ -173,7 +174,7 @@ public class LevelData {
          "               ^$$$$l  #  @         @$$$$$ ",   
          "               @$$$$      @>>>>>>>>>>$$$$$",   
          "              ^$$$$$      @$$$$$$$$$$$$$$$  ",   
-         "              @$$$$$ M    @$$$$$$$$$$$$$$$  ",
+         "     2         @$$$$$ M    @$$$$$$$$$$$$$$$  ",
          "***************************$$$$$$$$$$$$$$$ ",
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
