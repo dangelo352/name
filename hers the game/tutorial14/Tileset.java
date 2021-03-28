@@ -99,7 +99,9 @@ public class Tileset {
      new Tile("Spikes" ,'M',"tutorial14/texture/MiddleSpikes.png"),
      new Tile("SpikesL", '[', "tutorial14/texture/LeftSpikes.PNG"),
      new Tile("SpikesR", ']', "tutorial14/texture/RightSpikes.PNG"),
-    // new Tile("WallSpikeL", 
+     new Tile("WallSpikeL", 'k', "tutorial14/texture/LeftWallSpike.PNG"),
+     new Tile("WallSpikeR", 'l', "tutorial14/texture/RightWallSpike.PNG"),
+     new Tile("CeilingSpikes", 'm', "tutorial14/texture/CeilingSpikes.PNG")
           
     };
 }
