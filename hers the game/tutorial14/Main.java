@@ -140,7 +140,11 @@ public class Main extends Application {
            player.setFill( new ImagePattern(image));  
            }catch(FileNotFoundException e){} }
            
-           dagga = createEntity(600,400, s_wide, s_tall, "tutorial14/texture/player/Assassin.GIF");
+           if(is_running_direction==1){
+           dagga = createEntity((int)player.getLayoutX(),(int)player.getLayoutY(), 50, 20, "tutorial14/texture/DaggerLeft.PNG");
+           }else{
+           dagga = createEntity(600,400, 50, 20, "tutorial14/texture/DaggerRight.PNG");
+           }
            daggas.add(dagga);
            
     } 
@@ -178,8 +182,9 @@ public class Main extends Application {
           
         }
         if (isPressed(KeyCode.SPACE)){
-        
-           shoot();
+           if(!shoot_toggle){
+              shoot(); shoot_toggle = true;
+           }
         
         }else{shoot_toggle = false;}
 
