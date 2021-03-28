@@ -82,9 +82,9 @@ public class LevelData {
          "P  HHH  oo                   HH   }{   HH                    ",
          "W  SX{            H  HHHHHH  }{        }{  HHHH          HHH2",   
          "W  1              P  SXXXXP                SXXPH        HSXXX",
-         "W  1MMMMMMMMMMMMMMW  1YYYYW                1YYYPH      HSYYYY",
-         "W  1YYYYYYYYYYYYYYW  1YYYYW                1YYYYPH    HSYYYYY",
-         "W                    1YYYYW                1YYYYYPHHoHSYYYYYY",
+         "W  1MMMMMMMMMMMMMMW  1YYYYW                1YYjPH      HSiYYY",
+         "W  1YYYYYYYYYYYYYYW  1YYYYW                1YYYjPH    HSiYYYY",
+         "W                    1YYYYW                1YYYYjPHHoHSiYYYYY",
          "WHHHHHHoHHoHHoHHHHHHH1YYYYWMMMMMMMMMMMMMMMM1YYYYYYYYYYYYYYYYY",
          "jXXXXXXXXXXXXXXXXXXXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
          "                     "
