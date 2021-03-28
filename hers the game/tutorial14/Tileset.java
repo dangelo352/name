@@ -85,6 +85,7 @@ public class Tileset {
     new Tile("air",'0',"" ),      // no change or add texture this is no texture
     new Tile("air",' ',"" ),      // this is more no texture
     new Tile("grass",'H',"tutorial14/texture/forest/BlueTopGrass.GIF"),
+    new Tile("HillTopGrass", 't', "tutorial14/texture/hills/HillTopGrass.GIF"),
     new Tile("CeilingBottom", '3', "tutorial14/texture/forest/CeilingBottom.GIF")  
     };
     public static Tile SpecialTile[] = 
