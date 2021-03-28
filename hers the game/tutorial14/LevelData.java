@@ -53,8 +53,8 @@ public class LevelData {
         "           4                 ",
         "        4         4          ",
         "     S                       ",
-        "    SY                       ",
-        "   SYY                       ",
+        "    Si                       ",
+        "   SiY   o   o   o   o   o   ",
         "XXYYYYXXXXXXXXXXXXXXXXXXXXXXX",
         "                     "
        },
