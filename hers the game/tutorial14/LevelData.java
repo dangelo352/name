@@ -39,7 +39,7 @@ public class LevelData {
          "                     ",
          "                     ",
          "                     ",
-         "     HHH             ",
+         "     HHH         o   ",
          "HHHHHXXXHHHH  HHH HH2",
          "XXXXXXXXXXXXXXXXXXXXX",
          "                     "

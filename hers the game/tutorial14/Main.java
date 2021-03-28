@@ -279,7 +279,7 @@ public class Main extends Application {
             if (!(Boolean)enemy.getProperties().get("alive")) {
                 it.remove();
                 gameRoot.getChildren().remove(enemy);
-                   Current_Level =0;
+                Current_Level = 0;
                 initContent();
                 
                 }
@@ -406,14 +406,6 @@ public class Main extends Application {
                     }
             }
         
-        public void handle1(long now1) {
-                
-                if (dialogEvent1) {
-                    dialogEvent1 = false;
-                    Current_Level +=0;
-                    initContent();
-                    }
-            }
         };
 
         timer.start();
