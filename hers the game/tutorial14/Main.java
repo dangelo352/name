@@ -64,7 +64,7 @@ public class Main extends Application {
     
     //this controlls player size
     public int player_tall = 80;
-    public int player_wide = 59;
+    public int player_wide = 55;
     public int s_tall = 80;
     public int s_wide = 59;
 

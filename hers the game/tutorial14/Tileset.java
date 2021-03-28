@@ -42,10 +42,10 @@ public class Tileset {
     };
     public static Tile SpecialTile[] = 
     {
-    new Tile("levelend" ,'2',"tutorial14/texture/koin.png")
+    new Tile("levelend" ,'2',"tutorial14/texture/koin.gif")
     };
     public static Tile EnemyTile[] = 
     {
-     new Tile("megaDeath03" ,'M',"tutorial14/texture/spikes.png")
+     new Tile("Spikes" ,'M',"tutorial14/texture/MiddleSpikes.png")
     };
 }
