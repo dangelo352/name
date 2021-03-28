@@ -258,7 +258,6 @@ public class Main extends Application {
          
          moveBoxX(shmove,daggas.get(i));
          
-         
          }
         
         
@@ -282,9 +281,20 @@ public class Main extends Application {
         }
         for (Node spike : spikes) {
             if (player.getBoundsInParent().intersects(spike.getBoundsInParent())) {
-                spike.getProperties().put("alive", false);                
+                spike.getProperties().put("alive", false);
+                Current_Level = 0;
+                initContent();                
             }
         }
+        
+        for (Node spike : enemys) {
+            if (player.getBoundsInParent().intersects(spike.getBoundsInParent())) {
+                spike.getProperties().put("alive", false);
+                Current_Level = 0;
+                initContent();                
+            }
+        }
+        
         
         for (Rectangle enemy : enemys) {
            for (Rectangle dagga : daggas) {
@@ -300,7 +310,7 @@ public class Main extends Application {
            }
         }
 
-        
+        /*
         for (Iterator<Rectangle> it = enemys.iterator(); it.hasNext(); ) {
             Node enemy = it.next();
             if (!(Boolean)enemy.getProperties().get("alive")) {
@@ -310,7 +320,7 @@ public class Main extends Application {
                 initContent();
                 
                 }
-           }
+           }*/
         }
     
     private void moveBoxX(int value, Rectangle moveable) {

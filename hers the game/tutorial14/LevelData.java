@@ -45,7 +45,6 @@ public class LevelData {
          ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
          "3333333333333333333333333333333333333333333333333333333333333",
          "                                                             ",
-<<<<<<< HEAD
          "                                                             ",
          "                                                             ",
          "X      oo                         YY                         ",
@@ -56,18 +55,6 @@ public class LevelData {
          "X                    Y    Y                Y     Y    Y      ",
          "X     o   o    o     Y    YMMMMMMMMMMMMMMMMY      YYYY       ",
          "XXXXXXXXXXXXXXXXXXXXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY ",
-
-=======
-         "P                                                            ",
-         "W                                 XX                         ",
-         "W  SXP                       XX        XX                   2",   
-         "W  1              P  SXXXXP                SXXP          SXXX",
-         "W  1MMMMMMMMMMMMMMW  1YYYYW                1YYYP        SYYYY",
-         "W  1YYYYYYYYYYYYYYW  1YYYYW                1YYYYP      SYYYYY",
-         "W                    1YYYYW                1YYYYYP    SYYYYYY",
-         "W                    1YYYYWMMMMMMMMMMMMMMMM1YYYYYYXXXXYYYYYYY",
-         "XXXXXXXXXXXXXXXXXXXXXXXXXXXXYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY",
->>>>>>> 7410532c091336c94a1e86d46e955595f53a3c3c
          "                     "
         },
         {
