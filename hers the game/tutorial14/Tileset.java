@@ -96,7 +96,7 @@ public class Tileset {
     public static Tile EnemyTile[] = 
     {
     new Tile("LeftGWalk" ,'o',"tutorial14/texture/enemies/LeftGWalk.GIF"),
-    new Tile("BlueMageLeft", 'r', "tutorial14/texture/enemies/BlueMageLeft.GIF"),
+    new Tile("BlueMageLeft", 'z', "tutorial14/texture/enemies/BlueMageLeft.GIF"),
     new Tile("BlueMageLeft", 's', "tutorial14/texture/enemies/BlueMageRight.GIF"),
 
     };

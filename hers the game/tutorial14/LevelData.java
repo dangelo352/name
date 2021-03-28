@@ -3,11 +3,12 @@ package tutorial14;
 public class LevelData {
     
     public static int player_start_pos[][] ={
-      {0,320},
-      {0,320},
+      {0,10},
+      {0,10},
       {150,220},//4
-      {0,320}, //5
-      {0,320},  //level 7 start etc.
+      {0,10}, //5
+      {0,10},  //level 7 start etc.
+      {0,10}, //Hill B
       {0,320}, //8
       {0,320}, //9
       {0,320}, //10
@@ -64,7 +65,7 @@ public class LevelData {
         "              H      H       ",
         "           H  4      4       ",   
         "        H  4      H          ",
-        "     H  4         4          ",
+        "    2 H  4         4          ",
         "    HS                       ",
         "   HSi                       ",
         "HHHSiY   o   o   o   o   o   ",
@@ -78,7 +79,7 @@ public class LevelData {
          "3333333333333333333333333333333333333333333333333333333333333",
          "                                                             ",
          "                                                             ",
-         "                                  HH                         ",
+         "     2                             HH                         ",
          "P  HHH  oo                   HH   }{   HH                    ",
          "W  SX{            H  HHHHHH  }{        }{  HHHH          HHH2",   
          "W  1              P  SXXXXP                SXXPH        HSXXX",
@@ -90,27 +91,28 @@ public class LevelData {
          "                     "
         },
         {
-         //level 3 Castle: B
-         "))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
-         "                              B         )))))))))))))))AAAA",
-         "                              B         B              BAAA",
-         "               k-l     =C+        deef                2BAAA",
-         "                m     dAAD                 =CCCCCCCCCCCAAAAA",
-         "                       BACCCCC+            BAAAAAAAAAAAAAAAA",   
-         "                       BAAAAAAD            BAAAAAAAAAAAAAAA",
-         "          =CCCCCCCCCCCCCAAAAAAD            BAAAAAAAAAAAAAAA",
-         "         =AAAAAAAAAAAAAAAAAAAAD    =CCCCCCCAAAAAAAAAAAAAAAA",
-         "        =AAAAAAAAAAAAAAAAAAAAACMMCCAAAAAAAAAAAAAAAAAAAAAAAA",
-         "       =AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-         "CCCCCCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ",
+        //level 5 Forest: C
+         ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
+         "33333333333333333333333333W333331 ",
+         "                          W     1 ",
+         "       H    H    H    HH  W     1 ",
+         "       4    4    4    SP  W  HH21 ",
+         "     H                QRH    }~~Y  ",   
+         "  2   4                  4HHH    1  ",
+         "HHHH   HHH   HHH   HHH   }XPH   1  ",
+         "XXXPl  SXPl  SXPl  SXPH   QY{   1   ",
+         "YYYWl  1YWl  1YWl  1YjP         1  ",
+         "YYYWlHH1YWlHH1YWlHH1YYWHHHHHHHHH1 ",
+         "YYYjXXXiYjXXXiYjXXXiYYjXXXXXXXXXX ",
 
-         "     "
+         "Y                                " 
+        //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
         //level 4 Hills: A
          "                                                     I     I",
          "                     KKK                                   I",
-         "                     LJT                         KKKKK     I",
+         "   2                  LJT                         KKKKK     I",
          "   KKKKKKKKKKKK        I                         LJJJT     I",
          "   LJJJJJJJJJJJT     KoIKKMKKKKK   KKKKKK   KKKKKIIIII     I",
          "   IIIIIIIIIII       LJIJJJJJJJT   LJJJJT   LJJJJIIIII     I",
@@ -124,42 +126,22 @@ public class LevelData {
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 5 Forest: C
-         ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
-         "33333333333333333333333333W333331 ",
-         "                          W     1 ",
-         "       H    H    H    HH  W     1 ",
-         "       4    4    4    SP  W  HH21 ",
-         "     H                QRH    }~~Y  ",   
-         "     4                  4HHH    1  ",
-         "HHHH   HHH   HHH   HHH   }XPH   1  ",
-         "XXXPl  SXPl  SXPl  SXPH   QY{   1   ",
-         "YYYWl  1YWl  1YWl  1YjP         1  ",
-         "YYYWlHH1YWlHH1YWlHH1YYWHHHHHHHHH1 ",
-         "YYYjXXXiYjXXXiYjXXXiYYjXXXXXXXXXX ",
-
-         "Y                                " 
-        //1   5    10   15   20   25   30   35   40   45   50   55   60       
-        },
-        {
-        //level 6 Castle: A
-         "C))))))))))))))))))))))))))))))))))))))))))))))))))))",
-         "D                                                    ",
-         "D                                                    ",
-         "D                                                     ",
-         "D                                                     ",
-         "D                                          2           ",   
-         "D               -   -                    deeef         ",
-         "D          -                                          ",
-         "D      -                              -                ",
-         "Aeef                      -  -   - -                  ",
-         "D                                                     ",
-         "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM ",
-
-
-         "Y                                " 
-        //1   5    10   15   20   25   30   35   40   45   50   55   60       
-        },
+        //level 5 Hills: B
+      
+       "                                 JJJJJ       ",
+       "                                     I    K2K",
+       "        K     K                  K   I    LJJ",
+       "    KK  G     U/,                J  kIl  KOII",
+       "   KLT    K   U              K   I   I   LrII",
+       "   LrU    G   U      KMKK    G   I   I   OIII",
+       "   OIU        U/,    LJJTK       I   Il  OIII",   
+       "  KOIU        U      OIInT       I   I   OIII",
+       "  LrIU        U      OIIIU       Il  I   OIII",
+       "  OIIU        U      OIIIU       I       OIII",
+       "KKOIIU        U   o  OIIIU[MMMMM]IKKKKoKKOIII",
+       "JJrIInJJJJJJJJnJJJJJJrIIInJJJJJJJIJJJJJJJrIII",
+       "XXXXXXXXXXXXXXXXXXXXX"
+      },
         {
         //level 7 Mountains: A
         //level 7 (montin Level: A)
@@ -170,8 +152,8 @@ public class LevelData {
          "                   ^  k#      @>#   $>>>$$    ",
          "                  ^$   #       m    @$$$$$",
          "                ^*$$   #  @         @$$$$$ ",
-         "               ^$$$$l  #  @         @$$$$$ ",   
-         "               @$$$$      @>>>>>>>>>>$$$$$",   
+         "               ^$$$$   #  @         @$$$$$ ",   
+         "               @$$$$l     @>>>>>>>>>>$$$$$",   
          "              ^$$$$$      @$$$$$$$$$$$$$$$  ",   
          "              @$$$$$ M    @$$$$$$$$$$$$$$$  ",
          "***************************$$$$$$$$$$$$$$$ ",
@@ -207,7 +189,43 @@ public class LevelData {
          "9    79                                2     7     ",
          "VVVVVVVVVVVVVVVVVVMVVVVMVVVMVVVVVVVVVVVVVVVVVVVVVV",
 
-        }
+        },
+        {
+        //level 6 Castle: A
+         "C))))))))))))))))))))))))))))))))))))))))))))))))))))",
+         "D                                                    ",
+         "D                                                    ",
+         "D                                                     ",
+         "D                                                     ",
+         "D                                          2           ",   
+         "D               -   -                    deeef         ",
+         "D          -                                          ",
+         "D      -                              -                ",
+         "Aeef                      -  -   - -                  ",
+         "D                                                     ",
+         "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM ",
+
+
+         "Y                                " 
+        //1   5    10   15   20   25   30   35   40   45   50   55   60       
+        },
+        {
+         //level 3 Castle: B
+         "))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
+         "                              B         )))))))))))))))AAAA",
+         "                              B         B              BAAA",
+         "               k-l     =C+        deef                2BAAA",
+         "                m     dAAD                 =CCCCCCCCCCCAAAAA",
+         "                       BACCCCC+            BAAAAAAAAAAAAAAAA",   
+         "                       BAAAAAAD            BAAAAAAAAAAAAAAA",
+         "          =CCCCCCCCCCCCCAAAAAAD            BAAAAAAAAAAAAAAA",
+         "         =AAAAAAAAAAAAAAAAAAAAD    =CCCCCCCAAAAAAAAAAAAAAAA",
+         "        =AAAAAAAAAAAAAAAAAAAAACMMCCAAAAAAAAAAAAAAAAAAAAAAAA",
+         "       =AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+         "CCCCCCCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA ",
+
+         "     "
+        },
    };
    
 }
