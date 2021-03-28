@@ -37,12 +37,14 @@ public class Main extends Application {
     private ArrayList<Node> platforms = new ArrayList<Node>();
     private ArrayList<Node> coins = new ArrayList<Node>();
     private ArrayList<Node> enemys = new ArrayList<Node>();
-    private ArrayList<Node> daggas = new ArrayList<Node>();
+    private ArrayList<Rectangle> daggas = new ArrayList<Rectangle>();
+    private ArrayList<Integer> daggas_facing = new ArrayList<Integer>();
+    
     
     private Pane appRoot = new Pane();
     private Pane gameRoot = new Pane();
     private Pane uiRoot = new Pane();
-
+    
     private Rectangle player;
     private Rectangle dagga;
     private Point2D playerVelocity = new Point2D(0, 0);
@@ -140,12 +142,17 @@ public class Main extends Application {
            }catch(FileNotFoundException e){} }
            
            if(is_running_direction==1){
-           dagga = createEntity((int)player.getTranslateX(),(int)player.getTranslateY(), 50, 20, "tutorial14/texture/DaggerLeft.PNG");
+           dagga = createEntity((int)player.getTranslateX()-player_wide/2,(int)player.getTranslateY()+player_tall/2, 50, 20, "tutorial14/texture/DaggerLeft.PNG");
            }else{
-           dagga = createEntity((int)player.getTranslateX(),(int)player.getTranslateY(), 50, 20, "tutorial14/texture/DaggerRight.PNG");
+           dagga = createEntity((int)player.getTranslateX()+player_wide/2,(int)player.getTranslateY()+player_tall/2, 50, 20, "tutorial14/texture/DaggerRight.PNG");
            }
            daggas.add(dagga);
+           int dagger_direction = 2;
+           if (is_running_direction !=0){
+           dagger_direction = is_running_direction; 
+           }
            
+           daggas_facing.add(dagger_direction);
     } 
     
     private void update() {
@@ -206,7 +213,20 @@ public class Main extends Application {
         
        
         moveBoxY((int)playerVelocity.getY(),player);
-
+        
+         for(int i=0; i<daggas.size(); i++) {
+         
+         int shmove;
+         if (daggas_facing.get(i) == 2){
+         shmove = +8;
+         }else{shmove = -8;}
+         
+         moveBoxX(shmove,daggas.get(i));
+         
+         
+         }
+        
+        
         for (Node coin : coins) {
             if (player.getBoundsInParent().intersects(coin.getBoundsInParent())) {
                 coin.getProperties().put("alive", false);
@@ -215,7 +235,7 @@ public class Main extends Application {
             }
         }
         
-
+        
         for (Iterator<Node> it = coins.iterator(); it.hasNext(); ) {
             Node coin = it.next();
             if (!(Boolean)coin.getProperties().get("alive")) {
@@ -252,7 +272,7 @@ public class Main extends Application {
             for (Node platform : platforms) {
                 if (moveable.getBoundsInParent().intersects(platform.getBoundsInParent())) {
                     if (movingRight) {
-                        if (moveable.getTranslateX() + player_wide == platform.getTranslateX()) {
+                        if (moveable.getTranslateX() + 50 == platform.getTranslateX()) {
                             return;
                         }
                     }
@@ -263,7 +283,7 @@ public class Main extends Application {
                     }
                 }
             }
-            moveable.setTranslateX(player.getTranslateX() + (movingRight ? 1 : -1));
+            moveable.setTranslateX(moveable.getTranslateX() + (movingRight ? 1 : -1));
         }
     }
 
@@ -304,7 +324,7 @@ public class Main extends Application {
             canJump = false;
             }
 
-                 }catch(Exception e){
+            }catch(Exception e){
         return ;
         }
      }
@@ -327,10 +347,10 @@ public class Main extends Application {
     private boolean isPressed(KeyCode key) {
         return keys.getOrDefault(key, false);
     }
-    
+ 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        initContent();  
+        initContent();
         
         StackPane stackPane = new StackPane();
         String backgroundTemp = LevelData.background_img[Current_Level];
