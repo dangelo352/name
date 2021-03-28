@@ -65,7 +65,7 @@ public class LevelData {
         "              H      H       ",
         "           H  4      4       ",   
         "         H 4      H          ",
-        "    2H   4        4          ",
+        "     H   4        4          ",
         "    HS                       ",
         "   HSi                       ",
         "HHHSiY   o   o   o   o   o   ",
@@ -79,8 +79,8 @@ public class LevelData {
          "3333333333333333333333333333333333333333333333333333333333333",
          "                                                             ",
          "                                                             ",
-         "     2                            HH                         ",
-         "P  HHH  oo                   HH   }{   HH                    ",
+         "                                  HH                         ",
+         "P  HHH                       HH   }{   HH                    ",
          "W  SX{            H  HHHHHH  }{        }{  HHHH          HHH2",   
          "W  1              P  SXXXXP                SXXPH        HSXXX",
          "W  1MMMMMMMMMMMMMMW  1YYYYW                1YYjPH      HSiYYY",
@@ -98,7 +98,7 @@ public class LevelData {
          "       H    H    H    HH  W     1 ",
          "       4    4    4    SP  W  HH21 ",
          "     H                QRH    }~~Y  ",   
-         "  2  4                   4HHH   1  ",
+         "     4                   4HHH   1  ",
          "HHHH   HHH   HHH   HHH   }XPH   1  ",
          "XXXPl  SXPl  SXPl  SXPH   QY{   1   ",
          "YYYWl  1YWl  1YWl  1YjP         1  ",
@@ -110,8 +110,8 @@ public class LevelData {
         {
         //level 4 Hills: A
          "                                                     I     I",
-         "                     KKK                                   I",
-         "   2                  LJT                         KKKKK    I",
+         "                      KKK                                  I",
+         "                      LJT                        KKKKK     I",
          "   KKKKKKKKKKKK        I                         LJJJT     I",
          "   LJJJJJJJJJJJT     KoIKKMKKKKK   KKKKKK   KKKKKIIIII     I",
          "   IIIIIIIIIII       LJIJJJJJJJT   LJJJJT   LJJJJIIIII     I",
@@ -144,7 +144,7 @@ public class LevelData {
         {
         //level 7 Mountains: A
         //level 7 (montin Level: A)
-      "                <>>>>>>>>>$$$$$$$$$$$$$$$$$$$",
+      "                >>>>>>>>>>$$$$$$$$$$$$$$$$$$$",
          "                       $$$$$$$$$$>>>>>>>$$    ",
          "                       #$$$$$$$$#       @$   ",
          "                       #>>>>>>$$#      2@$     ",
