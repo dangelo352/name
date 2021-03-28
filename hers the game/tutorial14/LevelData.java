@@ -3,12 +3,8 @@ package tutorial14;
 public class LevelData {
     
     public static int player_start_pos[][] ={
-      {400,500}, //level 1 start position (x,y)
-      {0,500},  //level 2 start etc.
-      {0,500}, //3
       {150,220},//4
       {0,320}, //5
-      {400,200}, //level 6 start position (x,y)
       {0,320},  //level 7 start etc.
       {0,320}, //8
       {0,320}, //9
@@ -77,21 +73,6 @@ public class LevelData {
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC ",
 
          "     "
-        },
-        {
-        //level 6
-         "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-         "                              C         CCCCCCCCCCCCCCCC   ",
-         "                              C         C              C  ",
-         "               MCM     CCC        CCCC                2C   ",
-         "                M     CC C                 CCCCCCCCCCCCC   ",
-         "                       C CCCCCC            C              ",   
-         "                       C      C            C              ",
-         "          CCCCCCCCCCCCCC      C            C               ",
-         "         C                    C    CCCCCCCC               ",
-         "        C                     CMMCC                     ",
-         "        C                                              ",
-         "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC ",      
         },
         {
         //level 7 (Hills Level: A)
