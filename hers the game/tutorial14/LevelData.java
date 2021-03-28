@@ -9,10 +9,14 @@ public class LevelData {
       {0,10}, //5
       {0,10},  //level 7 start etc.
       {0,10}, //Hill B
-      {0,320}, //8
-      {0,320}, //9
-      {0,320}, //10
-      {100,320} //11
+      {60,480}, //8
+      {70,480}, //9
+      {80,480}, //10
+      {100,320}, //11
+      {100,320}, //12
+      {100,320}, //13
+      {100,320}, //14
+      {100,320} //5
     };
     
     public static String background_img[] ={
@@ -22,16 +26,13 @@ public class LevelData {
       "tutorial14/texture/forest/lvl1_background.PNG", //3
       "tutorial14/texture/hills/HillsBackground.PNG", //4
       "tutorial14/texture/hills/HillsBackground.PNG", //5
-      "tutorial14/texture/hills/HillsBackground.PNG", //6
-      "tutorial14/texture/mountin/MountainBackground.PNG", //7
-      "tutorial14/texture/mountin/MountainBackground.PNG", //8
-      "tutorial14/texture/mountin/MountainBackground.PNG", //9
+      "tutorial14/texture/hills/HillsBackground.PNG", //5
       "tutorial14/texture/cave/CaveBackground.PNG", //10
       "tutorial14/texture/cave/CaveBackground.PNG", //11
-      "tutorial14/texture/cave/CaveBackground.PNG", //12
       "tutorial14/texture/castle/CastleWalls.PNG", //13
-      "tutorial14/texture/castle/CastleWalls.PNG", //14
-      "tutorial14/texture/castle/CastleWalls.PNG", //15
+      "tutorial14/texture/castle/CastleWalls.PNG", //13
+      "tutorial14/texture/CastleWalls.PNG" //15
+      
     };
     
     
@@ -110,67 +111,50 @@ public class LevelData {
         {
         //level 4 Hills: A
          "                                                     I     I",
-         "                     KKK                                   I",
-         "                     LJL                         KKKKK     I",
-         "   KKKKKKKKKKKK        O                         LJJJT     I",
-         "   LJJJJJJJJJJT      KoOKKMKKKKK   KKKKKK   KKKKKOIIIU     I",
-         "   OIIIIIIIIIU       LJOJJJJJJJT   LJJJJT   LJJJJrIIIU     I",
-         "KKKOIIIIIIIIIU         OIIIIIIIU   OIIIIU   OIIIIIIIIUKKKK2I",
-         "JJJrIIIIIIIIIU       KKOIIIIIIIU   OIIIIU   OIIIIIIIInJJJJJI",
-         "IIIIIIIIIIIIIU       LJOIIIIIIIU   OIIIIU   OIIIIIIIIIIIIIII",
-         "IIIIIIIIIIIIIU         OIIIIIIIU   OIIIIU   OIIIIIIIIIIIIIII",
-         "IIIIIIIIIIIIIUKKKKKKKKKOIIIIIIIUMMMOIIIIUMMMOIIIIIIIIIIIIIII",
-         "IIIIIIIIIIIIInJJJJJJJJJrIIIIIIInJJJrIIIInJJJrIIIIIIIIIIIIIII",
+         "                      KKK                                  I",
+         "                      LJT                        KKKKK     I",
+         "   KKKKKKKKKKKK        I                         LJJJT     I",
+         "   LJJJJJJJJJJJT     KoIKKMKKKKK   KKKKKK   KKKKKIIIII     I",
+         "   IIIIIIIIIII       LJIJJJJJJJT   LJJJJT   LJJJJIIIII     I",
+         "KKKIIIIIIIIIII         IIIIIIIII   IIIIII   IIIIIIIIIIKKKK2I",
+         "JJJIIIIIIIIIII       KKIIIIIIIII   IIIIII   IIIIIIIIIIJJJJJI",
+         "IIIIIIIIIIIIII       LJIIIIIIIII   IIIIII   IIIIIIIIIIIIIIII",
+         "IIIIIIIIIIIIII         IIIIIIIII   IIIIII   IIIIIIIIIIIIIIII",
+         "IIIIIIIIIIIIIIKKKKKKKKKIIIIIIIIIMMMIIIIIIMMMIIIIIIIIIIIIIIII",
+         "IIIIIIIIIIIIIIJJJJJJJJJIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII",
          "Y                                " 
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
         //level 5 Hills: B
       
-        "                                 JJJJJ       ",
-        "                                     I    K2K",
-        "        o     K                  K   I    LJJ",
-        "    KK  G     U/,                J  kIl  KOII",
-        "   KLT    K   U              K   I   I   LrII",
-        "   LrU    G   U      KMKK    G   I   I   OIII",
-        "   OIU        U/,    LJJTK       I   Il  OIII",   
-        "  KOIU        U      OIInT       I   I   OIII",
-        "  LrIU        U      OIIIU       Il  I   OIII",
-        "  OIIU        U      OIIIU       I       OIII",
-        "KKOIIU        U   o  OIIIU[MMMMM]IKKKKoKKOIII",
-        "JJrIInJJJJJJJJnJJJJJJrIIInJJJJJJJIJJJJJJJrIII",
-        "XXXXXXXXXXXXXXXXXXXXX"
-        },
-        {
-        //level 06 Hills: C
-      
-       "              K   kO    KK             ",
-       "              T   kOKK  LTK            ",
-       "              Ul  kO/,  OnTK           ",
-       "  KKKKK   KKKKUl  kO    OInTK          ",
-       "  LJJJT   LJJJUl  kOKK  OIInTK         ",
-       "  OIIIU   OIIIUl  kO/,  OIIInTK        ",
-       "KKOIIIU   OIIIUl  kO    OIIIInTK       ",   
-       "JJrIIIU       Ul  kOKK  OIIIIInTK      ",
-       "IIIIIIU       Ul  kO/,  OIIIIIInTK     ",
-       "IIIIIIU   O   Ul        OIIIIIIInTK    ",
-       "IIIIIIU o O[M]UlKKKKKKKKOIIIIIIIInTK2KK",
-       "IIIIIInJJJrIIInJJJJJJJJJrIIIIIIIIInJJJJ",
+       "                                 JJJJJ       ",
+       "                                     I    K2K",
+       "        K     K                  K   I    LJJ",
+       "    KK  G     U/,                J  kIl  KOII",
+       "   KLT    K   U              K   I   I   LrII",
+       "   LrU    G   U      KMKK    G   I   I   OIII",
+       "   OIU        U/,    LJJTK       I   Il  OIII",   
+       "  KOIU        U      OIInT       I   I   OIII",
+       "  LrIU        U      OIIIU       Il  I   OIII",
+       "  OIIU        U      OIIIU       I       OIII",
+       "KKOIIU        U   o  OIIIU[MMMMM]IKKKKoKKOIII",
+       "JJrIInJJJJJJJJnJJJJJJrIIInJJJJJJJIJJJJJJJrIII",
        "XXXXXXXXXXXXXXXXXXXXX"
       },
         {
         //level 7 Mountains: A
         //level 7 (montin Level: A)
-         "                <>>>>>>>>>$$$$$$$$$$$$$$$$$$$",
+      "                >>>>>>>>>>$$$$$$$$$$$$$$$$$$$",
          "                       $$$$$$$$$$>>>>>>>$$    ",
          "                       #$$$$$$$$#       @$   ",
          "                       #>>>>>>$$#      2@$     ",
-         "                   ^  k#      @>#   ^>>>$$    ",
-         "                  ^g   #       m    @$$$$$",
-         "                ^*g$   #  @         @$$$$$ ",
-         "               ^g$$$   #  @         @$$$$$ ",   
+         "                   ^  k#      @>#   $>>>$$    ",
+         "                  ^$   #       m    @$$$$$",
+         "                ^*$$   #  @         @$$$$$ ",
+         "               ^$$$$   #  @         @$$$$$ ",   
          "               @$$$$l     @>>>>>>>>>>$$$$$",   
-         "              ^g$$$$      @$$$$$$$$$$$$$$$  ",   
+         "              ^$$$$$      @$$$$$$$$$$$$$$$  ",   
          "              @$$$$$ M    @$$$$$$$$$$$$$$$  ",
          "***************************$$$$$$$$$$$$$$$ ",
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
@@ -230,11 +214,11 @@ public class LevelData {
          "))))))))))))))))))))))))))))))))))))))))))))))))))))))))))",
          "                              B         )))))))))))))))AAAA",
          "                              B         B              BAAA",
-         "               k-l     =C+        deef                2BAAA",
+         "               k-l     =C+        deef       o  o  o  2BAAA",
          "                m     dAAD                 =CCCCCCCCCCCAAAAA",
          "                       BACCCCC+            BAAAAAAAAAAAAAAAA",   
-         "                       BAAAAAAD            BAAAAAAAAAAAAAAA",
-         "          =CCCCCCCCCCCCCAAAAAAD            BAAAAAAAAAAAAAAA",
+         "              o   o  o BAAAAAAD            BAAAAAAAAAAAAAAA",
+         "          =CCCCCCCCCCCCCAAAAAAD      o o  oBAAAAAAAAAAAAAAA",
          "         =AAAAAAAAAAAAAAAAAAAAD    =CCCCCCCAAAAAAAAAAAAAAAA",
          "        =AAAAAAAAAAAAAAAAAAAAACMMCCAAAAAAAAAAAAAAAAAAAAAAAA",
          "       =AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",

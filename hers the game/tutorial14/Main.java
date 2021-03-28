@@ -115,13 +115,13 @@ public class Main extends Application {
                 for(int k=0; k<Tileset.SpecialTile.length; k++) {
                   if( line.charAt(j) == Tileset.SpecialTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
                 
-                  Node coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.SpecialTile[k].path ); //litrlaly make platform with strong from tileset ckass
+                  Node coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.SpecialTile[k].path ); //do jem things
                   coins.add(coin);   
                   }
                 }
                 
                 for(int k=0; k<Tileset.Spikes.length; k++) {
-                  if( line.charAt(j) == Tileset.Spikes[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
+                  if( line.charAt(j) == Tileset.Spikes[k].tile_char ){ //do spike tile things
                   
                   Rectangle Spike = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.Spikes[k].path ); 
                   spikes.add(Spike); 
@@ -130,7 +130,7 @@ public class Main extends Application {
                 }
                 
                 for(int k=0; k<Tileset.EnemyTile.length; k++) {
-                  if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
+                  if( line.charAt(j) == Tileset.EnemyTile[k].tile_char ){ //do enemy tile things 
                   
                   Rectangle enemy = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
                   enemys.add(enemy); 
@@ -225,6 +225,10 @@ public class Main extends Application {
         if (isPressed(KeyCode.SPACE)){
            if(!shoot_toggle){
               shoot(); shoot_toggle = true;
+                               Current_Level +=1;
+                 initContent();
+                 
+              
            }
         
         }else{shoot_toggle = false;}
