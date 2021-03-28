@@ -55,6 +55,7 @@ public class Tileset {
     new Tile("CaveCeiling", '5', "tutorial14/texture/cave/CaveCeiling.PNG"),
     new Tile("CaveFloat", '6', "tutorial14/texture/cave/CaveFloat.PNG"),
     new Tile("CaveTile", 'V', "tutorial14/texture/cave/CaveTile.PNG"),
+    new Tile("CaveDirt", 'u', "tutorial14/texture/cave/CaveDirt.PNG"),
     new Tile("LeftCave", '7', "tutorial14/texture/cave/LeftCave.PNG"),
     new Tile("LeftCorner", '8', "tutorial14/texture/cave/LeftCorner.PNG"),
     new Tile("RightCave", '9', "tutorial14/texture/cave/RightCave.PNG"),
