@@ -123,7 +123,7 @@ public class Main extends Application {
                 for(int k=0; k<Tileset.Spikes.length; k++) {
                   if( line.charAt(j) == Tileset.Spikes[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
                   
-                  Rectangle Spike = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.EnemyTile[k].path ); 
+                  Rectangle Spike = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.Spikes[k].path ); 
                   spikes.add(Spike); 
                   
                   }
