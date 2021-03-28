@@ -55,7 +55,7 @@ public class LevelData {
        "XXXXXXXXXXXXXXXXXXXXX"
       },
       {
-        //level 1
+        //level 1 Forest: A
       
         ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
         "33333333333333333333333333333",
@@ -72,7 +72,7 @@ public class LevelData {
         "                     "
        },
        {
-         //level 2 
+         //level 2 Forest: B
        
          ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;",
          "3333333333333333333333333333333333333333333333333333333333333",
@@ -90,7 +90,7 @@ public class LevelData {
          "                     "
         },
         {
-         //level 3
+         //level 3 Forest C:
          "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
          "                              C         CCCCCCCCCCCCCCCC   ",
          "                              C         C              C  ",
@@ -107,7 +107,7 @@ public class LevelData {
          "     "
         },
         {
-        //level 4 (Hills Level: A)
+        //level 4 Hills: A
          "                                                     Y     Y",
          "                     HHH                                   Y",
          "     2                SXP                         HHHHH     Y",
@@ -143,17 +143,17 @@ public class LevelData {
         },
         {
         //level 6 (Hills Level: A)
-         "CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC",
-         "                                                    ",
-         "                                                    ",
-         "                                                     ",
-         "                                                     ",
-         "                                           2           ",   
-         "X               C   C                    CCCCC         ",
-         "X          C                                          ",
-         "X     C                              C                ",
-         "XCCC                      C  C   C C                  ",
-         "X                                                     ",
+         "C))))))))))))))))))))))))))))))))))))))))))))))))))))",
+         "D                                                    ",
+         "D                                                    ",
+         "D                                                     ",
+         "D                                                     ",
+         "D                                          2           ",   
+         "D               6   6                    deeef         ",
+         "D          6                                          ",
+         "D     6                              6                ",
+         "Aeef                      6  6   6 6                  ",
+         "D                                                     ",
          "MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM ",
 
 
@@ -161,52 +161,52 @@ public class LevelData {
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 7 (Hills Level: A)
-  		   "                 YYYYYYYYY                    ",
-         "                       Y        YYYYYYYYY    ",
-         "                       Y        Y       Y    ",
-         "                      MYYYYYYYYYY      2Y      ",
-         "                   Y   Y      YYY   YYYYY     ",
-         "                  XY   Y      YMY   Y      ",
-         "                XXYX   Y  Y         Y      ",
-         "               XYYYYM  Y  Y         Y      ",   
-         "               YYYYY      YYYYYYYYYYYYY     ",   
-         "              YYYYYY      Y                 ",   
-         "    X         YYYYYY M    Y                 ",
-         "YYYYYYYYYYYYYYYYYYYYYYYYYYYYY               ",
- 
+        //level 7 Mountains: A
+         "                ((((((((((                    ",
+         "                       @        Y(((((((Y    ",
+         "                       @        #       @    ",
+         "                      [#((((((YY#      2@      ",
+         "                   ^   #      @(#   Y>>>Y     ",
+         "                  ^$   #       m    @      ",
+         "                ^*Y$   #  @         @      ",
+         "               ^YYY$]  #  @         @      ",   
+         "               @YYY$      @>>>>>>>>>(>?     ",   
+         "              ^YYYY$      @                 ",   
+         "              @YYYY$ M    @                 ",
+         "****************************               ",
         //1   5    10   15   20   25   30   35   40   45   50   55   60       
         },
         {
-        //level 8
-        "CCCCCCCCCCCCCCCCCCCCFFFFFFFFFFFFFFFFCC",
-         "      FFFFFFFFFFF  F               FF ",
-         "    FF           F F                F ",
-         "    F             FF  FFF           F ",
-         "    F             FF    FFM     M   F ",
-         "    F  FFFF  FF   FF    FFFFFFFFFF  F ",
-         "    F  F  F  FF   FFFF  FF          F ",
-         "FFFF   F  F  FF         F           F ",
-         "F     F   F  FF         F  FFFFFFFFFF ",
-         "F     F   F  FF      FFFF           F ",
-         "F    F    FMMFF    MMFFFF          2F ",
-         "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+        //level 8 Mountains: B
+        "555555555555555555555555555555555555555",
+         "      55555555555  9               F7 ",
+         "    FF           F 9                7 ",
+         "    9             79  ab!           7 ",
+         "    9             79    9FM     M   7 ",
+         "    9  8VV!  8!   79    9Fbbbbbbbc  7 ",
+         "    9  7  9  79   F5bc  9F          7 ",
+         "F55F   7  9  79         9           7 ",
+         "9     8   9  79         9  abbbbbbbb7 ",
+         "9     7   9  79      8VV9           7 ",
+         "9    8    9MM79    MM7FF9          27 ",
+         "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
         },
         {
-        //level 9
-         "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV  ",
-         "    V                               V        V      ",
-         "    V                               VM   2   V     ",
-         "    V  VVVVVVVV  VVV  VVVVVVVVVVVV  V   VVV  V     ",
-         "    V      V                     V  V     V  V       ",
-         "    V      V                     V  VVV   V  V     ",
-         "    VVVV                         V        V  V  ",
-         "VVVV           VVVVVVVVVVVVVVV   V        V  V         ",
-         "V          VVVVVM                VVVVVVVVVV  V    ",
-         "V    VV                                      V        ",
-         "V    VV             M                        V     ",
-         "VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV",
-        },
+         //level 9 Mountains: C
+         "555555555555555555555555555555555555555555555555  ",
+         "    9                               7        7      ",
+         "    9                               7M       7     ",
+         "    9  abbbbbbc  abc  abbbbbbbbbb!  7   ab!  7     ",
+         "    9      V                     9  7     9  7       ",
+         "    9      V                     9  7bc   9  7     ",
+         "    Vbbc            M            9        9  7  ",
+         "V55V           8bbbbbbbbbbMbbc   9        9  7         ",
+         "9          abbbV    m   m    m   Mbbbbbbbb9  7    ",
+         "9    8!                                      7        ",
+         "9    79                                2     7     ",
+         "VVVVVVVVVVVVVVVVVVMVVVVMVVVMVVVVVVVVVVVVVVVVVVVVVV",
+
+        }
    };
    
 }
