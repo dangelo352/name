@@ -41,7 +41,6 @@ public class Main extends Application {
     private ArrayList<Rectangle> daggas = new ArrayList<Rectangle>();
     private ArrayList<Integer> daggas_facing = new ArrayList<Integer>();
     
-    
     private Pane appRoot = new Pane();
     private Pane gameRoot = new Pane();
     private Pane uiRoot = new Pane();
@@ -57,7 +56,7 @@ public class Main extends Application {
     private boolean dialogEvent = false, running = true;
  
     
-    public int Current_Level = 0;
+    public int Current_Level = 4;
     
     //these control physics objects size
     public int stage_tall = 60;
@@ -94,7 +93,7 @@ public class Main extends Application {
       
       
       levelWidth = LevelData.level_dat[Current_Level][0].length() * stage_wide;
-         
+        
         for (int i = 0; i < LevelData.level_dat[Current_Level].length; i++) {
             String line = LevelData.level_dat[Current_Level][i];
             for (int j = 0; j < line.length(); j++) {  
@@ -206,7 +205,7 @@ public class Main extends Application {
            is_running_direction=0;
         }
          
-        if (keyA&&!keyD && player.getTranslateX() >= 5) {
+        if (keyA && !keyD &&player.getTranslateX() >= 5) {
             moveBoxX(-5,player);
             if(1!=is_running_direction){
                try{
@@ -309,39 +308,31 @@ public class Main extends Application {
               }
            }
         }
-
-        /*
-        for (Iterator<Rectangle> it = enemys.iterator(); it.hasNext(); ) {
-            Node enemy = it.next();
-            if (!(Boolean)enemy.getProperties().get("alive")) {
-                it.remove();
-                gameRoot.getChildren().remove(enemy);
-                Current_Level = 0;
-                initContent();
-                
-                }
-           }*/
-        }
+     }
     
-    private void moveBoxX(int value, Rectangle moveable) {
+     private void moveBoxX(int value, Rectangle moveable) {
         boolean movingRight = value > 0;
-
+        boolean col = false;
         for (int i = 0; i < Math.abs(value); i++) {
             for (Node platform : platforms) {
                 if (moveable.getBoundsInParent().intersects(platform.getBoundsInParent())) {
                     if (movingRight) {
-                        if (moveable.getTranslateX() + 50 == platform.getTranslateX()) {
+                        if (moveable.getTranslateX() + player_wide == platform.getTranslateX()) {
+                            moveable.setTranslateX(moveable.getTranslateX() + (!movingRight ? 1 : -1));
                             return;
                         }
                     }
                     else {
                         if (moveable.getTranslateX() == platform.getTranslateX() + stage_wide) {
+                            moveable.setTranslateX(moveable.getTranslateX() + (!movingRight ? 1 : -1));
                             return;
                         }
                     }
                 }
             }
+            
             moveable.setTranslateX(moveable.getTranslateX() + (movingRight ? 1 : -1));
+            
         }
     }
 
@@ -361,6 +352,7 @@ public class Main extends Application {
                     }
                     else {
                         if (moveable.getTranslateY() == platform.getTranslateY() + stage_tall) {
+                            moveable.setTranslateY(player.getTranslateY() + 1);
                             return;
                         }
                     }
