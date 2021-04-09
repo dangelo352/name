@@ -34,8 +34,8 @@ public class Main extends Application {
 
     private HashMap<KeyCode, Boolean> keys = new HashMap<KeyCode, Boolean>();
 
-    private ArrayList<Node> platforms = new ArrayList<Node>();
-    private ArrayList<Node> coins = new ArrayList<Node>();
+    private ArrayList<Rectangle> platforms = new ArrayList<Rectangle>();
+    private ArrayList<Rectangle> coins = new ArrayList<Rectangle>();
     private ArrayList<Rectangle> enemys = new ArrayList<Rectangle>();
     private ArrayList<Rectangle> spikes = new ArrayList<Rectangle>();
     private ArrayList<Rectangle> daggas = new ArrayList<Rectangle>();
@@ -55,8 +55,9 @@ public class Main extends Application {
 
     private boolean dialogEvent = false, running = true;
  
-    
+    //game vars
     public int Current_Level = 4;
+    public int projectile_speed = 8;
     
     //these control physics objects size
     public int stage_tall = 60;
@@ -100,7 +101,7 @@ public class Main extends Application {
                 
                 for(int k=0; k<Tileset.ColTiles.length; k++) {
                   if(line.charAt(j) == Tileset.ColTiles[k].tile_char ){ 
-                  Node platform = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.ColTiles[k].path );
+                  Rectangle platform = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.ColTiles[k].path );
                   platforms.add(platform);   
                   }
                 }
@@ -114,7 +115,7 @@ public class Main extends Application {
                 for(int k=0; k<Tileset.SpecialTile.length; k++) {
                   if( line.charAt(j) == Tileset.SpecialTile[k].tile_char ){ //here we need an exeption for every not hard block this can be solved by 
                 
-                  Node coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.SpecialTile[k].path ); //litrlaly make platform with strong from tileset ckass
+                  Rectangle coin = createEntity(j*stage_wide, i*stage_tall, stage_wide, stage_tall, Tileset.SpecialTile[k].path ); //litrlaly make platform with strong from tileset ckass
                   coins.add(coin);   
                   }
                 }
@@ -248,16 +249,7 @@ public class Main extends Application {
        
         moveBoxY((int)playerVelocity.getY(),player);
         
-         for(int i=0; i<daggas.size(); i++) {
          
-         int shmove;
-         if (daggas_facing.get(i) == 2){
-         shmove = +8;
-         }else{shmove = -8;}
-         
-         moveBoxX(shmove,daggas.get(i));
-         
-         }
         
         
         for (Node coin : coins) {
@@ -269,7 +261,7 @@ public class Main extends Application {
         }
         
         
-        for (Iterator<Node> it = coins.iterator(); it.hasNext(); ) {
+        for (Iterator<Rectangle> it = coins.iterator(); it.hasNext(); ) {
             Node coin = it.next();
             if (!(Boolean)coin.getProperties().get("alive")) {
                 it.remove();
@@ -295,19 +287,33 @@ public class Main extends Application {
         }
         
         
-        for (Rectangle enemy : enemys) {
-           for (Rectangle dagga : daggas) {
-              if (dagga.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
+         
+         
+         
+         for(int i=0; i<daggas.size(); i++) {
+            for (Rectangle enemy : enemys) {
+               if (daggas.get(i).getBoundsInParent().intersects(enemy.getBoundsInParent())) {
+               
+                   try{//asdf
+                   Image image = new Image(new FileInputStream("tutorial14/texture/null.png"));
+                   enemy.setFill(new ImagePattern(image));  
+                   }catch(FileNotFoundException e){}
+                   enemys.remove(enemy);
+               }
+            }
+            boolean col = false;
+            int shmove = 0;
+            for (Rectangle platform : platforms) {
+              if (!daggas.get(i).getBoundsInParent().intersects(platform.getBoundsInParent())){
                 
-                  try{//asdf 
-                  Image image = new Image(new FileInputStream("tutorial14/texture/null.png"));
-                  enemy.setFill(new ImagePattern(image));  
-                  }catch(FileNotFoundException e){}
-                  enemys.remove(enemy);
-
-              }
-           }
-        }
+                if (daggas_facing.get(i) == 2){
+                shmove=projectile_speed;
+                }else{shmove=-projectile_speed;}
+          
+              }else{col = true;}
+            }
+            if(!col){daggas.get(i).setTranslateX(daggas.get(i).getTranslateX() + shmove);}
+         }
      }
     
      private void moveBoxX(int value, Rectangle moveable) {
