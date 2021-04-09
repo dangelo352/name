@@ -56,7 +56,7 @@ public class Main extends Application {
     private boolean dialogEvent = false, running = true;
  
     //game vars
-    public int Current_Level = 4;
+    public int Current_Level = 0;
     public int projectile_speed = 8;
     
     //these control physics objects size
@@ -80,7 +80,7 @@ public class Main extends Application {
 
       
     public Boolean shoot_toggle = false;  
-    
+    public Boolean jump_toggle = false;
     public Boolean keep_player = false;
       
     private void initContent() {
@@ -219,14 +219,12 @@ public class Main extends Application {
         }
 
         if (isPressed(KeyCode.W) && player.getTranslateY() >= 5) {
-            jumpPlayer();
-          
+           jumpPlayer();
         }
         if (isPressed(KeyCode.SPACE)){
            if(!shoot_toggle){
               shoot(); shoot_toggle = true;
            }
-        
         }else{shoot_toggle = false;}
 
         if (keyD&&!keyA&& player.getTranslateX() + player_wide <= levelWidth - 5) {
@@ -285,14 +283,11 @@ public class Main extends Application {
                 initContent();                
             }
         }
-        
-        
          
-         
-         
-         for(int i=0; i<daggas.size(); i++) {
-            for (Rectangle enemy : enemys) {
-               if (daggas.get(i).getBoundsInParent().intersects(enemy.getBoundsInParent())) {
+        for(int i=0; i<daggas.size(); i++) {
+                     
+           for (Rectangle enemy : enemys) { // doe enemy killing block
+              if (daggas.get(i).getBoundsInParent().intersects(enemy.getBoundsInParent())) {
                
                    try{//asdf
                    Image image = new Image(new FileInputStream("tutorial14/texture/null.png"));
@@ -301,7 +296,7 @@ public class Main extends Application {
                    enemys.remove(enemy);
                }
             }
-            boolean col = false;
+            boolean col = false; //do dagger collisions block
             int shmove = 0;
             for (Rectangle platform : platforms) {
               if (!daggas.get(i).getBoundsInParent().intersects(platform.getBoundsInParent())){
@@ -312,7 +307,11 @@ public class Main extends Application {
           
               }else{col = true;}
             }
-            if(!col){daggas.get(i).setTranslateX(daggas.get(i).getTranslateX() + shmove);}
+            if(!col){daggas.get(i).setTranslateX(daggas.get(i).getTranslateX() + shmove);
+            }else{
+             if (daggas.get(i).getBoundsInParent().intersects(player.getBoundsInParent())) {
+             canJump = true;}
+            }
          }
      }
     
@@ -336,9 +335,7 @@ public class Main extends Application {
                     }
                 }
             }
-            
             moveable.setTranslateX(moveable.getTranslateX() + (movingRight ? 1 : -1));
-            
         }
     }
 
